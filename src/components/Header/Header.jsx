@@ -34,7 +34,7 @@ const Header = () => {
                
             </nav>
             <nav className={style.navPages}>
-                <Link to=' ' className={style.link}>Home</Link>
+                <Link to='/' className={style.link}>Home</Link>
                 <Link to='/livros' className={style.link}>Livros</Link>
                 <Link to='/clientes' className={style.link}>Clientes</Link>
                 <Link to='/equipe' className={style.link}>Equipe</Link>

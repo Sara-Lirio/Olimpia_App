@@ -73,16 +73,16 @@
     display: flex;
     position: fixed;
     left: -100%;
-    top: 2em;
+    top: 0em;
     transition: 1s;
     transform: 1s;
 }
 
 .menuActive {
     left: 0;
-    margin-top: -5em;
     height: 80vh;
     width: 200px;
+    position: fixed;
 }
 
 .menuItens {
