@@ -1,0 +1,170 @@
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 6em 0 2em;
+}
+
+.btnMenu {
+    cursor: pointer;
+}
+
+.logo{
+    width: 10%;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    border: none;
+    width: 34em;
+    background-color: #EEEEEE;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: .3em .5em;
+    margin-right: .5em;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.btnSearch {
+    background-color: #D69748;
+    border: none;
+    border-radius: 5px;
+    padding: 0em 4em;
+    font-weight: 600;
+    height: 2.2em;
+    cursor: pointer;
+}
+
+.navPages {
+    display: flex;
+    justify-content: center;
+    margin-right: 10em;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 2em;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    background-color: #eeeeee;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    left: -100%;
+    top: 2em;
+    transition: 1s;
+    transform: 1s;
+}
+
+.menuActive {
+    left: 0;
+    margin-top: -5em;
+    height: 80vh;
+    width: 200px;
+}
+
+.menuItens {
+    width: 200px;
+    height: 100vh;
+    list-style: none;
+    background-color: #eeeeee;
+}
+
+.btnClose {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo1{
+    width: 20%;
+    margin-top: .6em;
+}
+
+
+@media (max-width:768px) {
+    .container {
+        width: 23em;
+    }
+
+    
+    .logo{
+        width: 12%;
+        margin: none;
+    }
+
+    .nav {
+        margin: 1em 3em 0 2em;
+    }
+
+    .btnSearch {
+        padding: .2em 2em;
+        font-size: 12px;
+    }
+
+    .btnMenu {
+        width: 23px;
+    }
+
+    .navPages {
+        margin: 0.4em 2em 0 1em;
+    }
+
+    .link {
+        font-size: 10px;
+    }
+
+    .menu,
+    .menuItens {
+        width: 180px;
+    }
+
+    .btnClose {
+        padding-left: 8.5em;
+        padding-top: .5em;
+    }
+
+    .close {
+        width: 20px;
+    }
+
+}
+
+@media (max-width:425px) {
+    .navPages {
+        display:none
+    }
+
+    .container, .input {
+        width: 15em;
+        font-size: 10px;
+    }
+
+    .btnSearch {
+        padding: em 1em;
+        font-size: 9px;
+    }
+}

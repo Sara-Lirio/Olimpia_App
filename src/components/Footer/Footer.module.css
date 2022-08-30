@@ -1,0 +1,27 @@
+.footer {
+    background-color: #013E19;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5em;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10em;
+}
+
+.social {
+    font-weight: 400;
+    align-items: center;
+}
+
+.containerSocial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
