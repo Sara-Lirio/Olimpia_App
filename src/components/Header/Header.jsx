@@ -17,7 +17,7 @@ const Header = () => {
     const handleMenu = () => setMenu(!menu)
 
     return (
-        <header className={style.header}>
+        <header className={style.headerLogin}>
             <nav className={style.nav}>
                 <FiMenu size={30} className={style.btnMenu} onClick={handleMenu} />
                 <img className={style.logo} src={Logo} alt='logo' />
@@ -30,11 +30,11 @@ const Header = () => {
                 <p className={style.user}>
                     <BiUserCircle size={28}/>
                     Usuário</p>
-                <button className={style.btnSearch}>Sair</button>
+                <Link to='/' className={style.btnExit}>Sair</Link>
                
             </nav>
             <nav className={style.navPages}>
-                <Link to='/' className={style.link}>Home</Link>
+                <Link to='/home' className={style.link}>Home</Link>
                 <Link to='/livros' className={style.link}>Livros</Link>
                 <Link to='/clientes' className={style.link}>Clientes</Link>
                 <Link to='/equipe' className={style.link}>Equipe</Link>

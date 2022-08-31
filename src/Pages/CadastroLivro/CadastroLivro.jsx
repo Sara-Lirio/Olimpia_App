@@ -1,8 +1,9 @@
 import React from 'react'
+import Header from '../../components/Header/Header'
 
 const CadastroLivro = () => {
   return (
-    <div>CadastroLivro</div>
+    <div><Header/></div>
   )
 }
 

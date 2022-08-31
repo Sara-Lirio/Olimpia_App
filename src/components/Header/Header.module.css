@@ -9,8 +9,20 @@
     margin: 1em 6em 0 2em;
 }
 
+.navLogin {
+    display: flex;
+    justify-content: end;
+    height: 4em;
+}
+
 .btnMenu {
     cursor: pointer;
+}
+
+.logoOlimpia{
+    width: 10%;
+    padding: .6em;
+    margin-right: 61em;
 }
 
 .logo{
@@ -37,20 +49,52 @@
     align-items: center;
 }
 
-.btnSearch {
+.btnExit {
     background-color: #D69748;
     border: none;
+    color:black;
     border-radius: 5px;
-    padding: 0em 4em;
+    padding: 0em 3em;
     font-weight: 600;
-    height: 2.2em;
     cursor: pointer;
+    margin-top: .5em;
+    display: flex;
+    align-items: center;
+}
+
+.btnLogin{
+    background-color: #D69748;
+    border: none;
+    font-size: 17px;
+    color: white;
+    padding: 0em 3em;
+    display: flex;
+    align-items: center;
+    width: 10.2em;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.btnLogin:hover {
+    color: #013E19;
+}
+
+.diagonal{
+    background-color: #D69748;
+    width: 2em;
+    margin-left: 1em;
+    border: none;
+    -webkit-transform: skew(-20deg); /* Chrome, Opera */
+    -ms-transform: skew(-20deg); /* IE */
+        transform: skew(-20deg); 
+        margin-right: -1.3em;
 }
 
 .navPages {
     display: flex;
     justify-content: center;
     margin-right: 10em;
+    margin-top: .5em;
 }
 
 .link {
@@ -83,6 +127,7 @@
     height: 80vh;
     width: 200px;
     position: fixed;
+    top:0em
 }
 
 .menuItens {
