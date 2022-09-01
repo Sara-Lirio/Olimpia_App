@@ -1,12 +1,11 @@
 import React from 'react'
 import HeaderLogin from '../../components/Header/HeaderLogin'
-import imag from '../../assets/ramo2.png'
 import style from './Home.module.css'
 
 const HomeLogin = () => {
     return (
         <>
-            <HeaderLogin text='LOGIN' />
+            <HeaderLogin/>
             <div className={style.image}>
                 <div className={style.container}>
                     <p className={style.phase}>“O livro é uma extensão da memória e da imaginação”</p>
@@ -14,7 +13,6 @@ const HomeLogin = () => {
 
                 </div>
             </div>
-            {/* <img src={imag}/> */}
 
         </>
 

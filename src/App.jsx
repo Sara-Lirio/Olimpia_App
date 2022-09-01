@@ -8,7 +8,6 @@ import Equipe from './Pages/Equipe/Equipe'
 import CadastroCliente from './Pages/CadastroCliente/CadastroCliente'
 import CadastroLivro from './Pages/CadastroLivro/CadastroLivro'
 import HomeLogin from './Pages/Home/HomeLogin'
-import Login from './Pages/Login/Login'
 
 function App() {
 
@@ -22,7 +21,6 @@ function App() {
         <Route path='/equipe' element={<Equipe />} />
         <Route path='/cadastroCliente' element={<CadastroCliente />} />
         <Route path='/cadastroLivro' element={<CadastroLivro />} />
-        <Route path='/login' element={<Login/>} />
       </Routes>
 
       <Footer />

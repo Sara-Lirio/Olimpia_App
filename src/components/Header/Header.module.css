@@ -149,6 +149,40 @@
     margin-top: .6em;
 }
 
+.btnEntrar{
+    background-color: #D69748;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    padding: .7em 2.6em;
+    border-radius: 11px;
+    margin: 3em;
+}
+
+.image {
+    width: 10%;
+}
+
+.imageBook{
+    border-right: 1px solid rgb(165, 164, 164);
+    width: 50%;
+}
+
+.box{
+    display: flex;
+}
+
+.btnFechar{
+    cursor: pointer;
+}
+
+.formBox{
+    margin: auto 0 auto 5em;
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+   
+}
 
 @media (max-width:768px) {
     .container {
