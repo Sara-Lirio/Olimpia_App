@@ -27,8 +27,8 @@ const Header = () => {
                         <BiSearchAlt size={20} />
                 </form>
                 
-                <p className={style.user}>
-                    <BiUserCircle size={28}/>
+                <p className={style.user} >
+                    <BiUserCircle size={35} color='#b3b3b3'/>
                     Usuário</p>
                 <Link to='/' className={style.btnExit}>Sair</Link>
                

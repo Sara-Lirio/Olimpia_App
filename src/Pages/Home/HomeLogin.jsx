@@ -6,14 +6,15 @@ const HomeLogin = () => {
     return (
         <>
             <HeaderLogin/>
-            <div className={style.image}>
+            <section className={style.image}>
                 <div className={style.container}>
                     <p className={style.phase}>“O livro é uma extensão da memória e da imaginação”</p>
                     <p className={style.author}>Jorge Luís Borges</p>
-
                 </div>
-            </div>
-
+            </section>
+            <section>
+                {/* <p>A Livraria Olimpia é um gerenciador de livros e clientes. </p> */}
+            </section>
         </>
 
     )

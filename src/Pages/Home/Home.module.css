@@ -103,3 +103,51 @@ width: 36%;
     margin-left: 8em;
     font-size: 18px;
 }
+
+
+@media (max-width:425px) {
+    .container {
+        width: 80%;
+        margin-left: 5.25em;
+    }
+
+    .phase{
+        font-size: 19px;
+        padding: .2em .3em .2em .4em;      
+    }
+    
+    .author{
+        padding: .1em 2em .4em 1em;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:375px) {
+    .container {
+        width: 90%;
+        margin-left: 3em;
+    }
+
+    .phase{
+        font-size: 17px; 
+    }
+    
+    .author{
+        padding: .1em 2em .4em 1em;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:320px) {
+    .container {
+        margin-left: 1.9em;
+    }
+
+    .phase{
+        font-size: 16px; 
+    }
+    
+    .author{
+        font-size: 14px;
+    }
+}
