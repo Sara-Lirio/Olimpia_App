@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import style from './Home.module.css'
-import imageCard from '../../assets/imageCard.png'
+import imageCard from '../../assets/imageCard.gif'
 import { Link } from 'react-router-dom'
 
 const Home = () => {

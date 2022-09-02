@@ -78,7 +78,7 @@ width: 36%;
 
 .card {
     width: 80%;
-    background-color: #ECECEC;
+    background-color: #EFEFEF;
     border-radius: 20px;
     margin: 4em auto;
     display: flex;
@@ -92,7 +92,7 @@ width: 36%;
 
 .books {
     width: 80%;
-    background-color: #ECECEC;
+    background-color: #EFEFEF;
     height: 30em;
     margin: .8em auto;
     border-radius: 20px;
