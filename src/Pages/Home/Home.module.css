@@ -104,6 +104,51 @@ width: 36%;
     font-size: 18px;
 }
 
+.line{
+    display: flex;
+    margin: 3em 34em;
+}
+
+.line1, .line2 {
+    width: 15em;
+    height: .25em; 
+}
+
+.line1{
+    background-color: #D69748;
+    border-radius: 10px 0 0 10px;
+}
+
+.line2{
+    background-color: #013E19;
+    border-radius:  0 10px 10px 0;
+}
+
+.cel {
+    width: 25em;
+    margin-left: 3em;
+}
+
+.subdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin:  1em auto;
+    font-size: 20px;
+}
+
+.subtitle{
+    text-align: center;
+    color: #013E19;
+    font-size: 28px;
+}
+
+.playstore{
+    cursor: pointer;
+    width: 50%;
+    margin: 1em 4em ;
+}
 
 @media (max-width:425px) {
     .container {

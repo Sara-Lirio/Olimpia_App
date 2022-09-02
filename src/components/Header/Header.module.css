@@ -19,6 +19,10 @@
     cursor: pointer;
 }
 
+.btnMenu:hover, .btnClose:hover {
+    color: #D69748;
+}
+
 .logoOlimpia{
     width: 10%;
     padding: .6em;
@@ -148,7 +152,7 @@
     margin-top: .6em;
 }
 
-.btnEntrar{
+.btnEntrar {
     background-color: #D69748;
     color: white;
     border: none;
@@ -156,6 +160,11 @@
     padding: .7em 2.6em;
     border-radius: 11px;
     margin: 3em;
+    font-weight: 500;
+}
+
+.btnEntrar:hover {
+    color: #013E19;
 }
 
 .image {

@@ -47,6 +47,16 @@
     color: white;
 }
 
+.btn:hover {
+    background-color: #013E19;
+    color: white;
+}
+
+.btnLivros:hover {
+    color: black;
+    background-color: #D69748;
+}
+
 .link:hover {
     border-bottom: 1px black solid;
     border-top: 1px black solid;
