@@ -51,30 +51,27 @@
     font-size: 14px;
 }
 
-.btnExit {
+.btnExit, .btnLogin {
     background-color: #D69748;
     border: none;
-    color:black;
-    border-radius: 5px;
-    padding: 0em 3em;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: .5em;
     display: flex;
     align-items: center;
+    padding: 0em 3em;
+    cursor: pointer;
+}
+
+.btnExit {
+    color:black;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: .5em;
 }
 
 .btnLogin{
-    background-color: #D69748;
-    border: none;
     font-size: 17px;
     color: white;
-    padding: 0em 3em;
-    display: flex;
-    align-items: center;
     width: 10.2em;
     justify-content: space-between;
-    cursor: pointer;
 }
 
 .btnLogin:hover {
@@ -183,7 +180,6 @@
     display: flex;
     flex-direction: column;
     height: 15em;
-   
 }
 
 @media (max-width:1024px) {

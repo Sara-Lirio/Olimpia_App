@@ -12,7 +12,7 @@ const Menu = () => {
             <Link to='/equipe' className={style.link}>Equipe</Link>
             <div className={style.buttons}>
             <Link to='/cadastroCliente' className={style.btn}> Cadastrar Clientes</Link>
-            <Link to='/cadastroLivro' className={style.btn}>Cadastro Livros</Link>
+            <Link to='/cadastroLivro' className={style.btnLivros}>Cadastro Livros</Link>
             </div>
 
         </div>
