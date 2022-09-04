@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/Header.jsx';
+import ManReading from '../../assets/man-reading.png';
 
 const DivTitulos = styled.div`
   display: flex;
@@ -23,6 +24,10 @@ const DivGeral = styled.form`
   border-radius: 15px;
   margin-top: 40px;
   box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.08);
+`;
+
+const Img = styled.img`
+  width: 330px;
 `;
 
 const CadastroCliente = () => {
