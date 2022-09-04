@@ -6,8 +6,9 @@ import ManReading from '../../assets/man-reading.png';
 const DivTitulos = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   padding: 0.5rem;
+  padding-top: 50px;
+  gap: 10px;
   background-color: #e9e9e9;
   align-items: flex-start;
   border-radius: 15px;
@@ -28,6 +29,7 @@ const DivGeral = styled.form`
 
 const Img = styled.img`
   width: 330px;
+  margin-top: 90px;
 `;
 
 const CadastroCliente = () => {
@@ -35,7 +37,11 @@ const CadastroCliente = () => {
     <div>
       <Header />
       <DivGeral>
-        <DivTitulos></DivTitulos>
+        <DivTitulos>
+          <h1>Cadastro de clientes</h1>
+          <p>Pronto para criar novas histórias?</p>
+          <Img src={ManReading} alt="" />
+        </DivTitulos>
       </DivGeral>
     </div>
   );
