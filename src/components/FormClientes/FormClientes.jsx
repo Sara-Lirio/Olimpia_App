@@ -11,7 +11,6 @@ const FormClientes = () => {
     cpf: '',
     email: '',
     senha: '',
-    confirmaSenha: '',
     telefone: '',
     cep: '',
   });
@@ -80,12 +79,7 @@ const FormClientes = () => {
           <Column mobile="6" tablet="12" desktop="6">
             <DivInput className="">
               <Label texto="Confirme sua senha" />
-              <Input
-                type="password"
-                value={cliente.confirmaSenha}
-                placeholder="Digite sua senha.."
-                onChange={({ target }) => handleChange(target, 'confirmaSenha')}
-              />
+              <Input type="password" placeholder="Digite sua senha.." />
             </DivInput>
           </Column>
           <Column mobile="6" tablet="12" desktop="6">
