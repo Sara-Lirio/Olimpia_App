@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/Header.jsx';
+import FormClientes from '../../components/FormClientes/FormClientes.jsx';
 import ManReading from '../../assets/man-reading.png';
 
 const DivTitulos = styled.div`
@@ -42,6 +43,7 @@ const CadastroCliente = () => {
           <p>Pronto para criar novas histórias?</p>
           <Img src={ManReading} alt="" />
         </DivTitulos>
+        <FormClientes />
       </DivGeral>
     </div>
   );
