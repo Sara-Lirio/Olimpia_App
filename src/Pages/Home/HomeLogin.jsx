@@ -3,6 +3,7 @@ import HeaderLogin from '../../components/Header/HeaderLogin'
 import style from './Home.module.css'
 import cel from '../../assets/cel.png'
 import playstore from '../../assets/playstore.png'
+import appstore from '../../assets/appstore.png'
 import { Link } from 'react-router-dom'
 
 const HomeLogin = () => {
@@ -20,18 +21,22 @@ const HomeLogin = () => {
                     <div className={style.line1}></div>
                     <div className={style.line2}></div>
                 </div>
-                <h3  className={style.subtitle}>Organização, segurança e patricidade</h3>
-                <div  className={style.subdiv}>
-                  <div>  <p>A Livraria Olímpia possue um gerenciador de livros e clientes.
+                <h3 className={style.subtitle}>Organização, segurança e patricidade</h3>
+                <div className={style.subdiv}>
+                    <div>  <p>A Livraria Olímpia possue um gerenciador de livros e clientes.
                         Aqui os dados dos seus clientes ficam seguros e organizados (Seguindo a Lei nº 13.709/2018, LGPD).
-                     <br/>  <br/> Os livros são cadastrados e ficam de fácil acesso e ótima visualização otimizando o tempo de procura.
-                    <br /> <br/>   Entre em contato em nossos canais de atendimento para maiores dúvidas e cadastramento. </p>
-                    <img src={playstore} className={style.playstore}/>
-            
-                 
-                    
+                        <br />  <br /> Os livros são cadastrados e ficam de fácil acesso e ótima visualização otimizando o tempo de procura.
+                        <br /> <br />   Entre em contato em nossos canais de atendimento para maiores dúvidas e cadastramento. </p>
+                        <div className={style.app}>
+                            <img src={appstore} className={style.playstore} />
+                            <img src={playstore} className={style.playstore} />
+
+                        </div>
+
+
+
                     </div>
-                  
+
                     <img src={cel} className={style.cel} />
                 </div>
 

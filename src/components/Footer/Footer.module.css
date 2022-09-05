@@ -1,28 +1,53 @@
 .footer {
-    background-color: #013E19;
+    background-color: rgb(1, 62, 25);
     color: white;
     bottom: 0;
     width: 100%;
-    height: 5em;
     padding-bottom: 1em;
+    display: grid;
+    grid-template-areas:
+        'logo frase apps'
+        'logo frase icons'
+        'copyright copyright copyright ';
+    gap: 10px;
 }
 
-.icons{
+
+.icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 10em;
+    margin-left: 5em;
 }
 
-.social {
-    font-weight: 400;
-    align-items: center;
+.appstore {
+    width: 10em;
+    margin: 2em auto 0 auto;
 }
 
-.containerSocial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2em;
-    
+.logo {
+    grid-area: logo;
+    width: 10.2em;
+    margin: 2em 0 0 5em ;
+}
+
+.frase {
+    grid-area: frase;
+    margin-top: 3em ;
+    line-height: 1.7
+}
+
+.icons {
+    grid-area: icons;
+}
+
+.apps {
+    grid-area: apps;
+}
+
+.copyright {
+    grid-area: copyright;
+    text-align: center;
+    margin-bottom: 1em;
 }

@@ -144,10 +144,14 @@ width: 36%;
     font-size: 28px;
 }
 
+.app {
+    display: flex;
+}
+
 .playstore{
     cursor: pointer;
     width: 50%;
-    margin: 1em 4em ;
+    margin: 1em 0;
 }
 
 @media (max-width:425px) {
