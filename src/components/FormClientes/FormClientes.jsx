@@ -6,6 +6,16 @@ import Label from '../../components/Label/Label.jsx';
 import Input from '../../components/Input/Input.jsx';
 
 const FormClientes = () => {
+  const [cliente, setCliente] = useState({
+    nome: '',
+    cpf: '',
+    email: '',
+    senha: '',
+    confirmaSenha: '',
+    telefone: '',
+    cep: '',
+  });
+
   return (
     <div>
       <Form>
