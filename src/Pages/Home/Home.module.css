@@ -93,9 +93,12 @@ width: 36%;
 .books {
     width: 80%;
     background-color: #EFEFEF;
-    height: 30em;
     margin: .8em auto;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    margin-bottom: 5em;
 }
 
 .h3 {

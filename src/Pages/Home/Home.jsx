@@ -3,6 +3,7 @@ import Header from '../../components/Header/Header'
 import style from './Home.module.css'
 import imageCard from '../../assets/imageCard.gif'
 import { Link } from 'react-router-dom'
+import CardBooks from '../../components/CardBooks/CardBooks'
 
 const Home = () => {
   return (
@@ -28,7 +29,11 @@ const Home = () => {
         <section>
           <h3 className={style.h3}>ADICIONADOS RECENTEMENTE</h3>
           <div className={style.books}>
-
+            <CardBooks/>
+            <CardBooks/>
+            <CardBooks/>
+            <CardBooks/>
+            <CardBooks/>
           </div>
         </section>
       </main>
