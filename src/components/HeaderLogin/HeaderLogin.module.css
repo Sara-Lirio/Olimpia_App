@@ -1,0 +1,72 @@
+.btnLogin,
+.btnEntrar,
+.btnFechar {
+    cursor: pointer;
+}
+
+.navLogin {
+    height: 4em;
+    display: grid;
+    grid-template-areas:
+        'logo logo logo login button';
+    gap: 0px;
+}
+
+.logoOlimpia {
+    grid-area: logo;
+    width: 14%;
+    margin: auto 2em;
+}
+
+.btnLogin {
+    grid-area: button;
+    background-color: #D69748;
+    border: none;
+    font-size: 17px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnLogin:hover {
+    color: black;
+}
+
+.diagonal {
+    grid-area: login;
+    border: none;
+    border-top: 63px solid transparent;
+    border-right: 2.8em solid #D69748;
+}
+
+.btnEntrar {
+    background-color: #D69748;
+    color: black;
+    border: none;
+    text-transform: uppercase;
+    padding: .7em 2.6em;
+    border-radius: 11px;
+    margin: 3em;
+    font-weight: 500;
+}
+
+.btnEntrar:hover {
+    color: white;
+}
+
+.imageBook {
+    border-right: 1px solid rgb(165, 164, 164);
+    width: 50%;
+}
+
+.box {
+    display: flex;
+}
+
+.formBox {
+    margin: auto 0 auto 5em;
+    display: flex;
+    flex-direction: column;
+    height: 15em;
+}

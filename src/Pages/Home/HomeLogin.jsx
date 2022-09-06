@@ -1,5 +1,5 @@
 import React from 'react'
-import HeaderLogin from '../../components/Header/HeaderLogin'
+import HeaderLogin from '../../components/HeaderLogin/HeaderLogin'
 import style from './Home.module.css'
 import cel from '../../assets/cel.png'
 import playstore from '../../assets/playstore.png'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './Header.module.css'
+import styles from './HeaderLogin.module.css'
 import { MdMenuBook } from "react-icons/md";
 import Logo from '../../assets/logo.png';
 import { Box, Modal, TextField } from '@mui/material';
@@ -29,6 +29,7 @@ const HeaderLogin = () => {
         <header className={styles.header}>
             <nav className={styles.navLogin}>
                 <img className={styles.logoOlimpia} src={Logo} alt='logo' />
+                
                 <div className={styles.diagonal}></div>
                 <button className={styles.btnLogin} onClick={handleOpen}>LOGIN
                     <div>
@@ -38,8 +39,7 @@ const HeaderLogin = () => {
 
                 <Modal
                     open={open}
-                    onClose={handleClose}
-                >
+                    onClose={handleClose}>
                     <Box sx={style} className={styles.box}>
 
                         <img src={book} className={styles.imageBook} />
@@ -50,8 +50,7 @@ const HeaderLogin = () => {
                             }}
                             noValidate
                             autoComplete="off"
-                            className={styles.formBox}
-                        >
+                            className={styles.formBox}>
 
                             <TextField id="standard-basic" label="Usuário" variant="standard" />
                             <TextField id="standard-basic" type='password' label="Senha" variant="standard" /><br /><br /><br />
