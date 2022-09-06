@@ -73,21 +73,58 @@
 
 
 @media (max-width:1024px) {
-  
+    .btnLogin {
+        padding: 0 .5em;
+    }
+
+    .formBox {
+        margin: auto 0 auto 2em;
+        height: 10em;
+        width: 14em;
+    }
+
+    .btnFechar{
+        width: 1.8em;
+    }
 }
 
 @media (max-width:768px) {
+    .btnLogin {
+        padding: 0 .6em;
+        font-size: 16px;
+    }
 
+    .iconBook {
+        width: 80%;
+    }
 }
 
 @media (max-width:425px) {
-   
+    .logoOlimpia {
+        width: 30%;
+        margin: auto 2em;
+    }
 }
 
 @media (max-width:375px) {
-   
+    .logoOlimpia {
+        width: 40%;
+        margin: auto 2em;
+    }
+
+    .btnLogin {
+        padding: 0 0.7em;
+        font-size: 14px;
+    }
+
+    .iconBook {
+        width: 70%;
+    }
 }
 
 @media (max-width:320px) {
-  
+    .logoOlimpia {
+        width: 50%;
+    }
+
 }

@@ -13,12 +13,13 @@ const HeaderLogin = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 900,
+        width: '65%',
         bgcolor: 'background.paper',
         border: 'none',
         borderRadius: 8,
         boxShadow: 25,
         p: 5,
+        
     };
 
     const [open, setOpen] = React.useState(false);
@@ -33,13 +34,13 @@ const HeaderLogin = () => {
                 <div className={styles.diagonal}></div>
                 <button className={styles.btnLogin} onClick={handleOpen}>LOGIN
                     <div>
-                        <MdMenuBook size={30} />
+                        <MdMenuBook size={30} className={styles.iconBook} />
                     </div>
                 </button>
 
                 <Modal
                     open={open}
-                    onClose={handleClose}>
+                    onClose={handleClose} className={styles.modal}>
                     <Box sx={style} className={styles.box}>
 
                         <img src={book} className={styles.imageBook} />
