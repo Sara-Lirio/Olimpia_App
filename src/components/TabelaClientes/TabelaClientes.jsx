@@ -16,6 +16,22 @@ const TabelaClientes = ({
   cep,
   handleAtualizaTela,
 }) => {
+  const navigate = useNavigate();
+  const [openDelete, setOpenDelete] = useState(false);
+
+  function abrirModal() {
+    setOpenDelete(true);
+  }
+
+  function fecharModal() {
+    setOpenDelete(false);
+  }
+
+  async function deletaCliente() {
+    await deleteCliente(id);
+    fecharModal();
+    handleAtualizaTela();
+  }
   return (
     <div>
       <Table>
