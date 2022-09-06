@@ -1,33 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Source+Sans+Pro&display=swap');
 
-.image {
-    background-image: url(../../assets/Livraria-Olimpia.jpg);
-    width: 100%;
-    height: 32em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(20%);
-    filter: opacity(85%)
-}
-
-.phase{
-    background-color: black;
-    color:white;
-    font-size: 25px;
-    padding: .2em 1em .2em 1em;
-    border-radius: 8px 0 0 8px;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.author{
-    color:#D69748;
-    background-color: black;
-    padding: .1em 2em .4em 1em;
-    font-family: 'Barlow', sans-serif;
-    font-size: 20px;
-    border-radius: 0 0 0 8px;
-}
-
 .btnLogin {
     background-color: #D69748;
     border: none;
@@ -59,14 +31,6 @@
     cursor: pointer;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-end;
-    justify-content: end;
-    padding-top: 24em;
-}
-
 .imgcard{
 width: 36%;
 }
@@ -93,61 +57,18 @@ width: 36%;
 .books {
     width: 80%;
     background-color: #EFEFEF;
-    height: 30em;
     margin: .8em auto;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    margin-bottom: 5em;
 }
 
 .h3 {
     font-weight: 500;
     margin-left: 8em;
     font-size: 18px;
-}
-
-.line{
-    display: flex;
-    margin: 3em 34em;
-}
-
-.line1, .line2 {
-    width: 15em;
-    height: .25em; 
-}
-
-.line1{
-    background-color: #D69748;
-    border-radius: 10px 0 0 10px;
-}
-
-.line2{
-    background-color: #013E19;
-    border-radius:  0 10px 10px 0;
-}
-
-.cel {
-    width: 25em;
-    margin-left: 3em;
-}
-
-.subdiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin:  1em auto;
-    font-size: 20px;
-}
-
-.subtitle{
-    text-align: center;
-    color: #013E19;
-    font-size: 28px;
-}
-
-.playstore{
-    cursor: pointer;
-    width: 50%;
-    margin: 1em 4em ;
 }
 
 @media (max-width:425px) {

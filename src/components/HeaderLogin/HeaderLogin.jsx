@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './Header.module.css'
+import styles from './HeaderLogin.module.css'
 import { MdMenuBook } from "react-icons/md";
 import Logo from '../../assets/logo.png';
 import { Box, Modal, TextField } from '@mui/material';
@@ -13,12 +13,13 @@ const HeaderLogin = () => {
         top: '50%',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: 900,
+        width: '65%',
         bgcolor: 'background.paper',
         border: 'none',
         borderRadius: 8,
         boxShadow: 25,
         p: 5,
+        
     };
 
     const [open, setOpen] = React.useState(false);
@@ -29,17 +30,17 @@ const HeaderLogin = () => {
         <header className={styles.header}>
             <nav className={styles.navLogin}>
                 <img className={styles.logoOlimpia} src={Logo} alt='logo' />
+                
                 <div className={styles.diagonal}></div>
                 <button className={styles.btnLogin} onClick={handleOpen}>LOGIN
                     <div>
-                        <MdMenuBook size={30} />
+                        <MdMenuBook size={30} className={styles.iconBook} />
                     </div>
                 </button>
 
                 <Modal
                     open={open}
-                    onClose={handleClose}
-                >
+                    onClose={handleClose} className={styles.modal}>
                     <Box sx={style} className={styles.box}>
 
                         <img src={book} className={styles.imageBook} />
@@ -50,8 +51,7 @@ const HeaderLogin = () => {
                             }}
                             noValidate
                             autoComplete="off"
-                            className={styles.formBox}
-                        >
+                            className={styles.formBox}>
 
                             <TextField id="standard-basic" label="Usuário" variant="standard" />
                             <TextField id="standard-basic" type='password' label="Senha" variant="standard" /><br /><br /><br />
