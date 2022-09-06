@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { createCliente } from '../../service/api.jsx';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import { createCliente, getClienteUnico } from '../../service/api.js';
 import { Form, Row, Column, DivInput, Button } from './FormStyle.js';
 import Label from '../../components/Label/Label.jsx';
 import Input from '../../components/Input/Input.jsx';
 
 const FormClientes = () => {
-  const [cliente, setCliente] = useState({
+  const navigate = useNavigate();
+  const [dadosForm, setDadosForm] = useState({
     nome: '',
     cpf: '',
     email: '',
@@ -14,18 +15,14 @@ const FormClientes = () => {
     telefone: '',
     cep: '',
   });
-
-  const navigate = useNavigate();
+  const handleChange = (key, value) => {
+    setDadosForm({ ...dadosForm, [key]: value });
+  };
 
   const handleCreate = (e) => {
     e.preventDefault();
-    createCliente(cliente);
+    createCliente(dadosForm);
     navigate('/clientes');
-  };
-
-  const handleChange = (target, key) => {
-    const value = target.value;
-    setCliente({ ...cliente, [key]: value });
   };
 
   return (
@@ -37,9 +34,9 @@ const FormClientes = () => {
               <Label texto="Nome" />
               <Input
                 type="text"
-                value={cliente.nome}
+                value={dadosForm.nome}
                 placeholder="Digite seu nome.."
-                onChange={({ target }) => handleChange(target, 'nome')}
+                onChange={({ target }) => handleChange(target.value, 'nome')}
               />
             </DivInput>
           </Column>
@@ -48,9 +45,9 @@ const FormClientes = () => {
               <Label texto="CPF" />
               <Input
                 type="text"
-                value={cliente.cpf}
+                value={dadosForm.cpf}
                 placeholder="Digite seu CPF.."
-                onChange={({ target }) => handleChange(target, 'cpf')}
+                onChange={({ target }) => handleChange(target.value, 'cpf')}
               />
             </DivInput>
           </Column>
@@ -59,9 +56,9 @@ const FormClientes = () => {
               <Label texto="Email" />
               <Input
                 type="text"
-                value={cliente.email}
+                value={dadosForm.email}
                 placeholder="Digite seu email.."
-                onChange={({ target }) => handleChange(target, 'email')}
+                onChange={({ target }) => handleChange(target.value, 'email')}
               />
             </DivInput>
           </Column>
@@ -70,9 +67,9 @@ const FormClientes = () => {
               <Label texto="Senha" />
               <Input
                 type="password"
-                value={cliente.senha}
+                value={dadosForm.senha}
                 placeholder="Digite sua senha.."
-                onChange={({ target }) => handleChange(target, 'senha')}
+                onChange={({ target }) => handleChange(target.value, 'senha')}
               />
             </DivInput>
           </Column>
@@ -87,9 +84,11 @@ const FormClientes = () => {
               <Label texto="Telefone" />
               <Input
                 type="text"
-                value={cliente.telefone}
+                value={dadosForm.telefone}
                 placeholder="Digite seu telefone.."
-                onChange={({ target }) => handleChange(target, 'telefone')}
+                onChange={({ target }) =>
+                  handleChange(target.value, 'telefone')
+                }
               />
             </DivInput>
           </Column>
@@ -98,16 +97,18 @@ const FormClientes = () => {
               <Label texto="CEP" />
               <Input
                 type="text"
-                value={cliente.cep}
+                value={dadosForm.cep}
                 placeholder="Digite seu CEP.."
-                onChange={({ target }) => handleChange(target, 'cep')}
+                onChange={({ target }) => handleChange(target.value, 'cep')}
               />
             </DivInput>
           </Column>
         </Row>
-        <Button onClick={handleCreate} type="submit">
-          Enviar
-        </Button>
+        <div>
+          <Button onClick={handleCreate} type="submit">
+            Enviar
+          </Button>
+        </div>
       </Form>
     </div>
   );
