@@ -1,0 +1,11 @@
+.livrosContainer{
+  padding: 10px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  background-color: #F5F5F5;
+  width: 100%;
+}

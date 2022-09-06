@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.introContainer{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.inputLivro{
+    height: 100%;
+    width: 50vw;
+    border: 2px solid #b8b8b8;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.inputLivro:hover{
+    border: 2px solid #D69748;
+}
+
+.iconPlus {
+    color:#013E19 !important;
+}
+
+.iconPlus:hover {
+    color: #D69748 !important;
+    transform: scale(1.2);
+}
+
+
+@media (max-width:700px){
+    .introContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:30px
+    }
+  }

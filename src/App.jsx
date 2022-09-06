@@ -1,4 +1,5 @@
-import './App.css'
+import './styles/reset.css'
+import './styles/global.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Clientes from './Pages/Clientes/Clientes'
