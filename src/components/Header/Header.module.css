@@ -1,8 +1,3 @@
-/* .header {
-    display: flex;
-    flex-direction: column;
-} */
-
 .nav {
     display: flex;
     justify-content: space-between;
@@ -124,126 +119,22 @@
 }
 
 
-
-/* 
 @media (max-width:1024px) {
-    .logoOlimpia{
-        width: 9em;
-        margin-right: 39em;
-    }
+  
 }
 
 @media (max-width:768px) {
-    .container {
-        width: 23em;
-    }
-
-    .logoOlimpia{
-        padding: .7em;
-        margin-right: 24em;
-    }
-    
-    .logo{
-        width: 12%;
-        margin: none;
-    }
-
-    .nav {
-        margin: 1em 3em 0 2em;
-    }
-
-    .btnSearch {
-        padding: .2em 2em;
-        font-size: 12px;
-    }
-
-    .btnMenu {
-        width: 23px;
-    }
-
-    .navPages {
-        margin: 0.4em 2em 0 1em;
-    }
-
-    .link {
-        font-size: 10px;
-    }
-
-    .menu,
-    .menuItens {
-        width: 180px;
-    }
-
-    .btnClose {
-        padding-left: 8.5em;
-        padding-top: .5em;
-    }
-
-    .close {
-        width: 20px;
-    }
 
 }
 
 @media (max-width:425px) {
-    .navPages {
-        display:none
-    }
-
-    .logoOlimpia{
-        width: 8em;
-        margin-right: 7em;
-        padding: .7em .2em;
-    }
-
-    .container, .input {
-        width: 15em;
-        font-size: 10px;
-    }
-
-    .btnSearch {
-        padding: em 1em;
-        font-size: 9px;
-    }
-
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 2em;
-        width: 8em;    
-    }
+   
 }
 
 @media (max-width:375px) {
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 1.5em;
-        width: 7.9em;    
-    }
-
-    .logoOlimpia{
-        width: 7em;
-        margin-right: 6em;
-        padding: .8em .2em;
-    }
+   
 }
 
 @media (max-width:320px) {
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 1.5em;
-        width: 7.9em;    
-    }
-
-    .logoOlimpia{
-        width: 6em;
-        margin-right: 3em;
-        padding: 1em .2em;
-    }
-
-    .diagonal{
-        width: 2em;
-        margin-left: 1em;
-        margin-right: -1.3em;
-    }
-    
-} */
+  
+}
