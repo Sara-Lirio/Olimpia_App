@@ -1,10 +1,35 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
 import { Div } from '../../styles/global.js';
+import { useEffect, useState } from 'react';
 import { Cell, Row } from '../../styles/global.js';
+import { readCliente } from '../../service/api';
 import TabelaClientes from '../../components/TabelaClientes/TabelaClientes.jsx';
 
 const Clientes = () => {
+  const [infos, setInfos] = useState([]);
+  const [atualizarTela, setAtualizarTela] = useState(false);
+
+  async function requisicao() {
+    const response = await readCliente();
+    setInfos(response);
+  }
+
+  useEffect(() => {
+    requisicao();
+  }, []);
+
+  function handleAtualizaTela() {
+    setAtualizarTela(true);
+  }
+
+  useEffect(() => {
+    if (atualizarTela === true) {
+      requisicao();
+      setAtualizarTela(false);
+    }
+  }, [atualizarTela]);
+
   return (
     <div style={{ textAlign: 'center' }}>
       <Header />
