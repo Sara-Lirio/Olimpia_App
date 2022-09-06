@@ -23,6 +23,21 @@ const Clientes = () => {
             <Cell align="left">Deletar</Cell>
           </Row>
         </th>
+        {infos?.map((infos, index) => {
+          return (
+            <TabelaClientes
+              id={infos.id}
+              nome={infos.nome}
+              cpf={infos.cpf}
+              email={infos.email}
+              senha={infos.senha}
+              telefone={infos.telefone}
+              cep={infos.cep}
+              key={index}
+              handleAtualizaTela={handleAtualizaTela}
+            />
+          );
+        })}
       </Div>
     </div>
   );
