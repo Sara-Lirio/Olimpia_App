@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { createCliente, getClienteUnico } from '../../service/api.js';
+// import { createCliente, getClienteUnico } from '../../service/api.js';
 import { Form, Row, Column, DivInput, Button } from './FormStyle.js';
 import Label from '../../components/Label/Label.jsx';
 import Input from '../../components/Input/Input.jsx';
