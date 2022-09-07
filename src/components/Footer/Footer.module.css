@@ -87,6 +87,10 @@
 }
 
 @media (max-width:425px) {
+
+    .logo {
+        margin: 2em 0 0 2.3em;
+    }
     .frase {
         display: none;
     }
@@ -112,7 +116,7 @@
             '  apps  '
             'copyright copyright ';
         gap: 10px;
-
+       
     }
 
 }
