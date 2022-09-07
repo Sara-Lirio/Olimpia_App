@@ -8,20 +8,6 @@ import book from '../../assets/Book.gif'
 import { VscClose } from "react-icons/vsc"
 
 const HeaderLogin = () => {
-    const style = {
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '65%',
-        bgcolor: 'background.paper',
-        border: 'none',
-        borderRadius: 8,
-        boxShadow: 25,
-        p: 5,
-        
-    };
-
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -30,7 +16,7 @@ const HeaderLogin = () => {
         <header className={styles.header}>
             <nav className={styles.navLogin}>
                 <img className={styles.logoOlimpia} src={Logo} alt='logo' />
-                
+
                 <div className={styles.diagonal}></div>
                 <button className={styles.btnLogin} onClick={handleOpen}>LOGIN
                     <div>
@@ -41,9 +27,10 @@ const HeaderLogin = () => {
                 <Modal
                     open={open}
                     onClose={handleClose} className={styles.modal}>
-                    <Box sx={style} className={styles.box}>
+                    <Box className={styles.box}>
 
                         <img src={book} className={styles.imageBook} />
+
                         <Box
                             component="form"
                             sx={{
@@ -53,8 +40,10 @@ const HeaderLogin = () => {
                             autoComplete="off"
                             className={styles.formBox}>
 
-                            <TextField id="standard-basic" label="Usuário" variant="standard" />
-                            <TextField id="standard-basic" type='password' label="Senha" variant="standard" /><br /><br /><br />
+
+
+                            <TextField id="standard-basic" label="Usuário" variant="standard" className={styles.input} />
+                            <TextField id="standard-basic" type='password' label="Senha" variant="standard" className={styles.input} /><br /><br /><br />
 
 
                             <div >
@@ -63,7 +52,6 @@ const HeaderLogin = () => {
                         </Box>
 
                         <VscClose size={35} onClick={handleClose} className={styles.btnFechar} />
-
 
 
                     </Box>

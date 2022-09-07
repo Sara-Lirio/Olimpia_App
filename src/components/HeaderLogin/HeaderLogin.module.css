@@ -56,20 +56,33 @@
 }
 
 .imageBook {
-    border-right: 1px solid rgb(165, 164, 164);
-    width: 50%;
+    width: 80%;
+    border-radius: 25px;
+    grid-area: imageBox;
 }
 
 .box {
-    display: flex;
+    display: grid;
+    grid-template-areas: 'imageBox formBox btnFechar';
+    gap:1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 25px;
+    padding: 2em 4em;
 }
 
 .formBox {
-    margin: auto 0 auto 5em;
-    display: flex;
-    flex-direction: column;
-    height: 15em;
+    margin: 2em 3em 2em 0; 
+    display: grid;
+    grid-area: formBox;
 }
+
 
 
 @media (max-width:1024px) {
@@ -79,16 +92,23 @@
 
     .formBox {
         margin: auto 0 auto 2em;
-        height: 10em;
         width: 14em;
     }
 
-    .btnFechar{
+    .btnFechar {
         width: 1.8em;
+    }
+
+    .imageBook{
+        width: 110%;
     }
 }
 
 @media (max-width:768px) {
+
+    .imageBook{
+        width: 110%;
+    }
     .btnLogin {
         padding: 0 .6em;
         font-size: 16px;
@@ -97,12 +117,55 @@
     .iconBook {
         width: 80%;
     }
+
+    .box {
+        grid-template-areas: 
+        'btnFechar'
+        'imageBox '
+        'formBox';
+        gap:1px;
+        width: 50%;
+    }
+
+    .formBox {
+        margin: auto 0 auto 0em;
+        width: 14em;
+    }
+
+    .btnEntrar {
+        margin-top: .1em;
+    }
 }
 
 @media (max-width:425px) {
     .logoOlimpia {
         width: 30%;
         margin: auto 2em;
+    }
+
+    .imageBook {
+        display: none;
+    }
+
+    .box {
+        width: 80%;
+        padding: 2em;
+    }
+
+    .input {
+        font-size: 16px;
+    }
+
+    .btnEntrar {
+        margin: 0 4em;
+    }
+
+    .formBox{
+        margin-top: .5em;
+    }
+    
+    .btnFechar{
+        margin-left: 16em;
     }
 }
 
@@ -120,11 +183,37 @@
     .iconBook {
         width: 70%;
     }
+
+    .box {
+        padding: 1em 2.6em;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    .btnEntrar{
+        margin: 0 2em 2em 2em;
+    }
+
+    .btnFechar{
+        margin-left: 14em;
+    }
+
 }
 
 @media (max-width:320px) {
     .logoOlimpia {
         width: 50%;
+    }
+
+    .box {
+        width: 86%;
+        padding: 1em;
+    }
+
+    .btnFechar{
+        width: 1.4em;
     }
 
 }
