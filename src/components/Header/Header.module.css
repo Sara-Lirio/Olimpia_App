@@ -1,7 +1,8 @@
 .nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 1em 6em 0 2em;
+    display: grid;
+    grid-template-areas: 'btnMenu logo search user btnExit';
+    margin: 1em 4em;
+    gap: 35px;
 }
 
 .btnMenu,
@@ -15,18 +16,25 @@
     color: #D69748;
 }
 
+.btnMenu {
+    grid-area: btnMenu;
+}
+
 .logo {
-    width: 10%;
+    width: 70%;
+    grid-area: logo;
 }
 
 .search {
     display: flex;
     align-items: center;
+    grid-area: search;
+    width: 40em;
 }
 
 .input {
     border: none;
-    width: 34em;
+    width: 100%;
     background-color: #EEEEEE;
     font-size: 15px;
     border-radius: 5px;
@@ -39,6 +47,7 @@
     align-items: center;
     color: #474545;
     font-size: 14px;
+    grid-area: user;
 }
 
 .btnExit {
@@ -47,9 +56,7 @@
     display: flex;
     align-items: center;
     padding: 0em 3em;
-}
-
-.btnExit {
+    grid-area: btnExit;
     color: black;
     border-radius: 5px;
     font-weight: 600;
@@ -119,22 +126,169 @@
 }
 
 
+@media (max-width:1440px) {
+    .logo {
+        width: 
+        40%;
+    }
+}
+
 @media (max-width:1024px) {
-  
+    .logo {
+        width: 80%;
+    }
+    
+    .search {
+        width: 25em;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    .navPages {
+        margin-right: 5em;
+        margin-top: .4em;
+    }
 }
 
 @media (max-width:768px) {
+    .nav {
+        grid-template-areas: 
+        'btnMenu logo user btnExit'
+        'search search search search';
+        margin: 1em 3em;
+        gap: 35px;
+    }
 
+    .logo {
+        width: 30%;
+    }
+    
+    .search {
+        width: 30em;
+        margin: 0 auto;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    .navPages {
+        margin-right: 3em;
+        margin-top: 2em;
+    }
+
+    .btnExit {
+        padding: 0em 2.4em;
+        font-weight: 600;
+        font-size: 14px;
+        height: 1.8em;
+        margin-top: .5em;
+    }
+
+    .btnMenu {
+        width: 25px;
+        
+    }
+
+    .user {
+        font-size: 13px;
+    }
+
+    .use{
+        width: 23px;
+    }
+ 
 }
 
 @media (max-width:425px) {
-   
+    .logo {
+        width: 35%;
+        margin-left: 6.7em;
+    }
+
+    .nav {
+        grid-template-areas: 
+        'btnMenu user btnExit'
+        'logo logo logo'
+        'search search search';
+        margin: 1em 3em;
+        gap: 10px;
+    }
+
+    .search {
+        width: 20em;
+    }
+
+    .user {
+        margin-left: 10em;
+    }
+
+    .btnExit {
+        padding: 0em 3.4em 0 1.8em;
+        font-size: 13px;
+        width: 2em;
+        margin-top: 0.5em;
+    }
+
+    .navPages {
+        margin-left: 2em;
+    }
 }
+
 
 @media (max-width:375px) {
-   
+   .nav{
+    margin: 1em 2em;
+   }
+
+   .navPages{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em ;
 }
 
+}
 @media (max-width:320px) {
-  
+    .search {
+        width: 15em;
+    }
+
+    .nav {
+        grid-template-areas: 
+        'btnMenu btnExit '      
+        'logo  logo'
+        'search  search';
+        margin: 1em 2em;
+        gap: 6px;
+    }
+
+    .btnExit {
+        margin-left: 11em;
+        margin-top: .5em;
+        font-size: 12px;
+    }
+
+    .user, .search {
+        display: none;
+    }
+    
+    .logo {
+        width: 40%;
+        margin-left: 5em;
+        margin-top: .2em;
+    }
+
+    .navPages{
+        display: flex;
+        flex-wrap: wrap;
+        width: 15em;
+        justify-content: space-around;
+        margin:  0 auto;
+    }
+
+    .link {
+        padding-bottom: .7em ;
+    }
 }

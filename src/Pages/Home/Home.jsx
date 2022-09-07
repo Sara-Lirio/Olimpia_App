@@ -24,9 +24,9 @@ const Home = () => {
       <main>
         <section className={style.card}>
           <div className={style.text}>
-            <h3>Organização e praticidade</h3>
-            <h1>Livraria Olimpia</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <h3 className={style.subtitle}>Organização e praticidade</h3>
+            <h1  className={style.title}>Livraria Olimpia</h1>
+            <p className={style.description}>Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Facere voluptate a dolorem veritatis veniam. Illum facere
               aspernatur doloremque animi praesentium veniam nihil ea
               quidem repellat! Molestiae reiciendis sequi exercitationem
@@ -38,6 +38,8 @@ const Home = () => {
           </div>
           <img src={imageCard} className={style.imgcard} />
         </section>
+
+
         <section>
           <h3 className={style.h3}>ADICIONADOS RECENTEMENTE</h3>
           <div className={style.books}>

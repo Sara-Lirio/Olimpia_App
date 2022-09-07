@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-left: 2em;
+    margin-bottom: 2em;
 }
 
 .image {
