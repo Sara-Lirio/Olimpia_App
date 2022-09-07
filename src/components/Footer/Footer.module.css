@@ -91,6 +91,11 @@
         display: none;
     }
 
+    .apps{
+        margin-right: .5em;
+        width: 15em;
+    }
+
     .appstore {
         margin: 1em auto 0 auto;
         width: 6em;
