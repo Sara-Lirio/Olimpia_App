@@ -1,0 +1,52 @@
+.card {
+    width: 10em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-bottom: 2em;
+}
+
+.image {
+    width: 10em;
+    height: 12em;
+    background-color: black;
+}
+
+.img {
+    width: 10em;
+    height: 12em;
+}
+
+.title{
+    font-size: 15px;
+}
+
+.description{
+    font-size: 12px;
+}
+
+.button {
+    background-color: rgb(1, 62, 25);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: .5em;
+}
+
+@media (max-width:768px) {
+
+}
+
+@media (max-width:425px) {
+}
+
+@media (max-width:375px) {
+    
+}
+
+@media (max-width:320px) {
+
+
+}

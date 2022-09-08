@@ -17,7 +17,7 @@ const Header = () => {
     const handleMenu = () => setMenu(!menu)
 
     return (
-        <header className={style.headerLogin}>
+        <header className={style.header}>
             <nav className={style.nav}>
                 <FiMenu size={30} className={style.btnMenu} onClick={handleMenu} />
                 <img className={style.logo} src={Logo} alt='logo' />
@@ -28,7 +28,7 @@ const Header = () => {
                 </form>
                 
                 <p className={style.user} >
-                    <BiUserCircle size={35} color='#b3b3b3'/>
+                    <BiUserCircle size={35} color='#b3b3b3' className={style.use}/>
                     Usuário</p>
                 <Link to='/' className={style.btnExit}>Sair</Link>
                

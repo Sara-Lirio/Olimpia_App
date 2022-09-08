@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Source+Sans+Pro&display=swap');
+
+.image {
+    background-image: url(../../assets/Livraria-Olimpia.jpg);
+    width: 100%;
+    height: 32em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(20%);
+    filter: opacity(85%)
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: end;
+    padding-top: 24em;
+}
+
+.phase{
+    background-color: black;
+    color:white;
+    font-size: 25px;
+    padding: .2em 1em .2em 1em;
+    border-radius: 8px 0 0 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.author{
+    color:#D69748;
+    background-color: black;
+    padding: .1em 2em .4em 1em;
+    font-family: 'Barlow', sans-serif;
+    font-size: 20px;
+    border-radius: 0 0 0 8px;
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+}
+
+.line1, .line2 {
+    width: 15em;
+    height: .25em; 
+}
+
+.line1{
+    background-color: #D69748;
+    border-radius: 10px 0 0 10px;
+}
+
+.line2{
+    background-color: rgb(1, 62, 25);
+    border-radius:  0 10px 10px 0;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: 
+    'subtitle subtitle '
+    'text cel'
+    'app cel'
+    ;
+    margin: .1em 10em 3em 10em ;
+    gap: 10px;
+}
+
+.subtitle {
+    grid-area: subtitle;
+    color: rgb(1, 62, 25);
+    text-align: center;
+    font-size: 30px;
+}
+
+.text {
+    grid-area: text;
+    margin-top: 2em;
+    font-size: 18px;
+}
+
+.app {
+    grid-area: app;
+ 
+}
+
+.cel {
+    grid-area: cel;
+    width: 100%;
+}
+
+.playstore {
+    width: 50%;
+}
+
+@media (max-width:1024px) {
+    .cel {
+        width: 130%;
+    }
+}
+
+@media (max-width:768px) {
+    .cel {
+        width: 190%;
+    }
+
+    .text {
+        margin-top: 1em;
+        font-size: 14px;
+    }
+
+    .line1, .line2 {
+        width: 10em;
+        height: .188em; 
+    }
+    
+    .subtitle {
+        font-size: 24px;
+    }
+}
+
+@media (max-width:425px) {
+    .main {
+        display: grid;
+        grid-template-areas: 
+        'subtitle subtitle '
+        'text text'
+        'cel cel'
+        'app app'
+
+        ;
+        margin: .1em 3em 3em 3em ;
+        gap: 10px;
+    }
+
+    .line1, .line2 {
+        width: 7em;
+        height: .15em; 
+    }
+
+    .cel {
+        width: 100%;
+    }
+
+    .phase{
+        font-size: 20px;
+        margin-left: 3em;
+    }
+    
+    .author{
+        padding: .1em 2em .4em 1em;
+        
+    }
+
+    .line1, .line2 {
+        width: 6em;
+        height: .16em; 
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:375px) {
+   
+}
+
+@media (max-width:320px) {
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .phase{
+        font-size: 18px;
+        margin-left: 4em;
+    }
+    
+    .author{
+        font-size: 15px;
+    }
+}

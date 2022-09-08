@@ -1,46 +1,40 @@
-.header {
-    display: flex;
-    flex-direction: column;
-}
-
 .nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 1em 6em 0 2em;
+    display: grid;
+    grid-template-areas: 'btnMenu logo search user btnExit';
+    margin: 1em 4em;
+    gap: 35px;
 }
 
-.navLogin {
-    display: flex;
-    justify-content: end;
-    height: 4em;
-}
-
-.btnMenu {
+.btnMenu,
+.btnExit,
+.btnClose {
     cursor: pointer;
 }
 
-.btnMenu:hover, .btnClose:hover {
+.btnMenu:hover,
+.btnClose:hover {
     color: #D69748;
 }
 
-.logoOlimpia{
-    width: 10%;
-    padding: .6em;
-    margin-right: 61em;
+.btnMenu {
+    grid-area: btnMenu;
 }
 
-.logo{
-    width: 10%;
+.logo {
+    width: 70%;
+    grid-area: logo;
 }
 
-.search{
+.search {
     display: flex;
     align-items: center;
+    grid-area: search;
+    width: 40em;
 }
 
 .input {
     border: none;
-    width: 34em;
+    width: 100%;
     background-color: #EEEEEE;
     font-size: 15px;
     border-radius: 5px;
@@ -53,44 +47,20 @@
     align-items: center;
     color: #474545;
     font-size: 14px;
+    grid-area: user;
 }
 
-.btnExit, .btnLogin {
+.btnExit {
     background-color: #D69748;
     border: none;
     display: flex;
     align-items: center;
     padding: 0em 3em;
-    cursor: pointer;
-}
-
-.btnExit {
-    color:black;
+    grid-area: btnExit;
+    color: black;
     border-radius: 5px;
     font-weight: 600;
     margin-top: .5em;
-}
-
-.btnLogin{
-    font-size: 17px;
-    color: white;
-    width: 10.2em;
-    justify-content: space-between;
-}
-
-.btnLogin:hover {
-    color: #013E19;
-}
-
-.diagonal{
-    background-color: #D69748;
-    width: 2em;
-    margin-left: 1em;
-    border: none;
-    -webkit-transform: skew(-20deg); /* Chrome, Opera */
-    -ms-transform: skew(-20deg); /* IE */
-        transform: skew(-20deg); 
-        margin-right: -1.3em;
 }
 
 .navPages {
@@ -130,7 +100,7 @@
     height: 80vh;
     width: 200px;
     position: fixed;
-    top:0em
+    top: 0em
 }
 
 .menuItens {
@@ -141,174 +111,184 @@
 }
 
 .btnClose {
-    cursor: pointer;
     display: flex;
     justify-content: space-between;
     padding: 1em;
 }
 
-.logo1{
+.logo1 {
     width: 20%;
     margin-top: .6em;
-}
-
-.btnEntrar {
-    background-color: #D69748;
-    color: white;
-    border: none;
-    text-transform: uppercase;
-    padding: .7em 2.6em;
-    border-radius: 11px;
-    margin: 3em;
-    font-weight: 500;
-}
-
-.btnEntrar:hover {
-    color: #013E19;
 }
 
 .image {
     width: 10%;
 }
 
-.imageBook{
-    border-right: 1px solid rgb(165, 164, 164);
-    width: 50%;
-}
 
-.box{
-    display: flex;
-}
-
-.btnFechar{
-    cursor: pointer;
-}
-
-.formBox{
-    margin: auto 0 auto 5em;
-    display: flex;
-    flex-direction: column;
-    height: 15em;
+@media (max-width:1440px) {
+    .logo {
+        width: 
+        40%;
+    }
 }
 
 @media (max-width:1024px) {
-    .logoOlimpia{
-        width: 9em;
-        margin-right: 39em;
+    .logo {
+        width: 80%;
+    }
+    
+    .search {
+        width: 25em;
+    }
+
+    .input {
+        font-size: 14px;
+    }
+
+    .navPages {
+        margin-right: 5em;
+        margin-top: .4em;
     }
 }
 
 @media (max-width:768px) {
-    .container {
-        width: 23em;
+    .nav {
+        grid-template-areas: 
+        'btnMenu logo user btnExit'
+        'search search search search';
+        margin: 1em 3em;
+        gap: 35px;
     }
 
-    .logoOlimpia{
-        padding: .7em;
-        margin-right: 24em;
+    .logo {
+        width: 30%;
     }
     
-    .logo{
-        width: 12%;
-        margin: none;
+    .search {
+        width: 30em;
+        margin: 0 auto;
     }
 
-    .nav {
-        margin: 1em 3em 0 2em;
+    .input {
+        font-size: 14px;
     }
 
-    .btnSearch {
-        padding: .2em 2em;
-        font-size: 12px;
+    .navPages {
+        margin-right: 3em;
+        margin-top: 2em;
+    }
+
+    .btnExit {
+        padding: 0em 2.4em;
+        font-weight: 600;
+        font-size: 14px;
+        height: 1.8em;
+        margin-top: .5em;
     }
 
     .btnMenu {
+        width: 25px;
+        
+    }
+
+    .user {
+        font-size: 13px;
+    }
+
+    .use{
         width: 23px;
     }
-
-    .navPages {
-        margin: 0.4em 2em 0 1em;
-    }
-
-    .link {
-        font-size: 10px;
-    }
-
-    .menu,
-    .menuItens {
-        width: 180px;
-    }
-
-    .btnClose {
-        padding-left: 8.5em;
-        padding-top: .5em;
-    }
-
-    .close {
-        width: 20px;
-    }
-
+ 
 }
 
 @media (max-width:425px) {
+    .logo {
+        width: 35%;
+        margin-left: 6.7em;
+    }
+
+    .nav {
+        grid-template-areas: 
+        'btnMenu user btnExit'
+        'logo logo logo'
+        'search search search';
+        margin: 1em 3em;
+        gap: 10px;
+    }
+
+    .search {
+        width: 20em;
+    }
+
+    .user {
+        margin-left: 10em;
+    }
+
+    .btnExit {
+        padding: 0em 3.4em 0 1.8em;
+        font-size: 13px;
+        width: 2em;
+        margin-top: 0.5em;
+    }
+
     .navPages {
-        display:none
-    }
-
-    .logoOlimpia{
-        width: 8em;
-        margin-right: 7em;
-        padding: .7em .2em;
-    }
-
-    .container, .input {
-        width: 15em;
-        font-size: 10px;
-    }
-
-    .btnSearch {
-        padding: em 1em;
-        font-size: 9px;
-    }
-
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 2em;
-        width: 8em;    
+        margin-left: 2em;
     }
 }
+
 
 @media (max-width:375px) {
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 1.5em;
-        width: 7.9em;    
-    }
+   .nav{
+    margin: 1em 2em;
+   }
 
-    .logoOlimpia{
-        width: 7em;
-        margin-right: 6em;
-        padding: .8em .2em;
-    }
+   .navPages{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1em ;
 }
 
+}
 @media (max-width:320px) {
-    .btnLogin{
-        font-size: 14px;
-        padding: 0em 1.5em;
-        width: 7.9em;    
+    .search {
+        width: 15em;
     }
 
-    .logoOlimpia{
-        width: 6em;
-        margin-right: 3em;
-        padding: 1em .2em;
+    .nav {
+        grid-template-areas: 
+        'btnMenu btnExit '      
+        'logo  logo'
+        'search  search';
+        margin: 1em 2em;
+        gap: 6px;
     }
 
-    .diagonal{
-        width: 2em;
-        margin-left: 1em;
-        margin-right: -1.3em;
+    .btnExit {
+        margin-left: 11em;
+        margin-top: .5em;
+        font-size: 12px;
+    }
+
+    .user, .search {
+        display: none;
     }
     
+    .logo {
+        width: 40%;
+        margin-left: 5em;
+        margin-top: .2em;
+    }
+
+    .navPages{
+        display: flex;
+        flex-wrap: wrap;
+        width: 15em;
+        justify-content: space-around;
+        margin:  0 auto;
+    }
+
+    .link {
+        padding-bottom: .7em ;
+    }
 }
