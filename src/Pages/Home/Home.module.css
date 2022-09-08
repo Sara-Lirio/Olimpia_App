@@ -92,11 +92,38 @@
     background-color: #EFEFEF;
     margin: .8em auto;
     border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
     padding: 2em;
     margin-bottom: 5em;
-    flex-wrap: wrap;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.books::-webkit-scrollbar{
+ display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    margin-left: 500px;
+}
+
+.btnleft, .btnright {
+    border: none;
+    background-color: transparent;
+    color: rgb(56, 56, 56);
+    margin-top: 29.1em;
+    cursor: pointer;
+}
+
+.btnleft:hover, .btnright:hover {
+    color: #D69748
+}
+
+.left, .right {
+    font-size: 50px;
 }
 
 .h3 {
