@@ -1,0 +1,103 @@
+#imagem,
+#capalivro,
+#titulo,
+#autor,
+#genero,
+#formato, 
+#valor, 
+#idioma,
+#estoque, 
+#paginas {
+display: flex;
+flex-direction: column;
+  width: 100%;
+}
+
+#imagem {
+  grid-area: img;
+
+}
+#capalivro{
+  grid-area: cpimg;
+  height: 150px;
+  width: 100px;
+  border: 1px solid #c6a078;
+  background-color: #f1f1f1;
+  object-fit: cover;
+}
+#titulo {
+  grid-area: titulo;
+}
+#autor {
+  grid-area: autor;
+}
+#genero {
+  grid-area: genero;
+}
+#formato {
+  grid-area: formato;
+}
+#valor {
+  grid-area: valor;
+}
+#idioma {
+  grid-area: idioma;
+}
+#estoque {
+  grid-area: estoque;
+}
+#paginas {
+  grid-area: pg;
+}
+
+
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "cpimg titulo titulo titulo"
+    "cpimg autor autor autor"
+    "img img img img"
+    "genero genero idioma idioma"
+    "formato formato formato formato"
+    "estoque pg valor valor";
+    align-items: center;
+  max-width: 1360px;
+  box-sizing: border-box;
+  gap: 15px;
+  padding: 50px 30px;
+  height: 100%;
+}
+
+#autor input{
+  width: 100%;
+}
+
+#radio{
+  display: inline;
+}
+
+.btncontainer{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.btncontainer button{
+  background-color: #013e19;
+  color: white;
+  width: 270px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media (max-width:700px){
+  .formContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
