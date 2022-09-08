@@ -12,5 +12,8 @@ export async function getLivros() {
 
 export async function deletaLivro(idLivro) {
   await api.delete(`/livros/idLivro/${idLivro}`);
-  return response.livros;
+}
+
+export async function putLivro(rota, idLivro, objLivro) {
+  await api.put(`/livros/idLivro/${rota}/${idLivro}`)
 }

@@ -9,6 +9,7 @@ import Equipe from './Pages/Equipe/Equipe'
 import CadastroCliente from './Pages/CadastroCliente/CadastroCliente'
 import CadastroLivro from './Pages/CadastroLivro/CadastroLivro'
 import HomeLogin from './Pages/Home/HomeLogin'
+import FormLivros from './components/FormLivros/FormLivros'
 
 function App() {
 

@@ -17,7 +17,7 @@ const ItemLivros = ({
   valor,
   idioma,
   qtdEstoque,
-  nPaginas,
+  numeroPaginas,
   handleAtualizar,
 }) => {
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ const ItemLivros = ({
           <p> Preço: R${valor}</p>
           <p>Idioma: {idioma}</p>
           <p>Quantidade em Estoque: {qtdEstoque}</p>
-          <p>Número de Páginas: {nPaginas}</p>
+          <p>Número de Páginas: {numeroPaginas}</p>
         </div>
         <div id={S.icons}>
           <BsPencilSquare
