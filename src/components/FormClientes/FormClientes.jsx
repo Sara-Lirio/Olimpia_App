@@ -53,6 +53,12 @@ const FormClientes = () => {
     console.log(dadosForm);
   }
 
+  useEffect(() => {
+    if (id) {
+      request();
+    }
+  }, []);
+
   return (
     <div>
       <Form>
