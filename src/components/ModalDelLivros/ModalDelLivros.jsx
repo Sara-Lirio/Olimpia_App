@@ -1,48 +1,47 @@
 import React from "react";
 import { Box, Button, Modal } from "@mui/material";
-import { display } from "@mui/system";
+import { deletaLivro } from "../../service/livroApi";
 
 const style = {
   position: "absolute",
+  color: "black",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "30%",
-  height: "30%",
-  bgcolor: "#D9D9D9",
-  border: "2px solid #d6d6d6",
+  height: "25%",
+  bgcolor: "background.paper",
   borderRadius: '16px',
   boxShadow: 24,
-  p: 6,
   display: "flex",
   flexDirection: "column",
   aligItems: "center",
   justifyContent: "space-between",
+  p: 4,
 };
 
-const ModalDelLivros = ({ open, handleFechar, deletaLivro}) => {
+const ModalDelLivros = ({ open, handleClose, onClick, fecharModal }) => {
   return (
-   
-      <Modal open={open} onClose={handleFechar}>
-
+    <Modal
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="parent-modal-title"
+      aria-describedby="parent-modal-description"
+    >
       <Box sx={style}>
-        <p>Quer mesmo excluir o livro do banco de dados?</p>
-        <div  style={{
-           display: 'flex',
-          justifyContent: 'space-between',
-        }}>
-        <Button
-          onClick={handleFechar}
-          color="primary"
-          variant="contained"
-        >Cancelar
-        </Button>
-        <Button
-          onClick={deletaLivro}
-          color="error"
-          variant="contained"
-        >Deletar
-        </Button>
+        <h4>Quer mesmo excluir este livro do banco de dados?</h4>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
+          <Button onClick={fecharModal} color="primary" variant="contained">
+            Cancelar
+          </Button>
+          <Button onClick={onClick} color="error" variant="contained">
+            Deletar
+          </Button>
         </div>
       </Box>
     </Modal>

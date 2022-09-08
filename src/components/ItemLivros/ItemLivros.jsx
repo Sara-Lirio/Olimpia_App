@@ -6,6 +6,7 @@ import { deletaLivro } from "../../service/livroApi";
 import ModalDelLivros from "../ModalDelLivros/ModalDelLivros";
 import S from "./ItemLivros.module.css";
 
+
 const ItemLivros = ({
   imagem,
   idLivro,
@@ -17,7 +18,7 @@ const ItemLivros = ({
   idioma,
   qtdEstoque,
   nPaginas,
-  handleAtualizar
+  handleAtualizar,
 }) => {
   const navigate = useNavigate();
   const [openDelete, setOpenDelete] = useState(false);
@@ -30,15 +31,16 @@ const ItemLivros = ({
     setOpenDelete(false);
   }
 
-  async function deletaLivro() {
-    const request = await deletaLivro(idLivro);
+  async function delLivro() {
+   await deletaLivro(idLivro);
     fecharModal();
-    handleAtualizar();
+    handleAtualizar(true);
   }
 
   return (
     <>
-      <section className={S.cardLivro}>
+    <section className={S.livrosContainer}>
+      <div className={S.cardLivro}>
         <div id={S.imagem}>
           <img src={imagem} alt="capa do livro"></img>
           <p>id:{idLivro}</p>
@@ -60,13 +62,17 @@ const ItemLivros = ({
           />
           <MdDelete size={30} onClick={abrirModal} />
         </div>
+      </div>
       </section>
 
       <ModalDelLivros
         open={openDelete}
-        handleFechar={fecharModal}
-        deletaLivro={deletaLivro}
+        handleClose={fecharModal}
+        onClick={delLivro}
+        fecharModal={fecharModal}
       />
+
+
     </>
   );
 };
