@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { React, useState } from "react";
 import { getLivros } from "../../service/livroApi";
 import ItemLivros from "../ItemLivros/ItemLivros";
+import Load from "../Load/Load";
 
 
 const DashboardLivros = () => {
   const [livros, setLivros] = useState([]);
   const [atualizar, setAtualizar] = useState(false);
+  const [removeLoading, setRemoveLoading] = useState(false)
 
   async function requisicao() {
     const response = await getLivros();
@@ -18,7 +20,10 @@ const DashboardLivros = () => {
   }
 
   useEffect(() => {
-    requisicao();
+    setTimeout(() => {
+      requisicao();
+      setRemoveLoading(true)
+    }, 1000)
   }, []);
 
   useEffect(() => {
@@ -50,6 +55,7 @@ const DashboardLivros = () => {
               />
             );
           })}
+            {!removeLoading && <Load/>}
       </section>
     </div>
   );

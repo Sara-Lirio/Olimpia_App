@@ -24,6 +24,8 @@
 .id{
     text-align: center;
     margin-top: .6em;
+    color:gray;
+    font-size: 14px;
 }
 
 .rating{

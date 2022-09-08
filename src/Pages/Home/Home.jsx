@@ -6,10 +6,14 @@ import { Link } from 'react-router-dom'
 import CardBooks from '../../components/CardBooks/CardBooks'
 import { getLivros } from "../../service/livroApi"
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import Load from '../../components/Load/Load'
+
 
 const Home = () => {
   const [livros, setLivros] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false)
   const carousel = useRef(null)
+
 
   async function requisicao() {
     const response = await getLivros();
@@ -17,7 +21,10 @@ const Home = () => {
   }
 
   useEffect(() => {
-    requisicao();
+    setTimeout(() => {
+      requisicao();
+      setRemoveLoading(true)
+    }, 1000)
   }, []);
 
   const handleLeftClick = (e) => {
@@ -60,6 +67,7 @@ const Home = () => {
             {!!livros &&
               livros.map((livro) => {
                 return (
+                  <>
                   <CardBooks
                     imagem={livro.imagem}
                     idLivro={livro.idLivro}
@@ -68,19 +76,22 @@ const Home = () => {
                     qtdEstoque={livro.qtdEstoque}
                     className={style.item}
                   />
+                  <div className={style.buttons}>
+                  <button className={style.btnleft}
+                    onClick={handleLeftClick} >
+                    <FaAngleLeft className={style.left} />
+                  </button>
+               
+                  <button className={style.btnright}
+                    onClick={handleRightClick} >
+                    <FaAngleRight className={style.right} />
+                  </button>
+                </div>
+                </>
                 );
               })}
-             <div className={style.buttons}>
-              <button className={style.btnleft}
-                onClick={handleLeftClick} >
-                <FaAngleLeft className={style.left} />
-              </button>
-         
-              <button className={style.btnright}
-                onClick={handleRightClick} >
-                <FaAngleRight className={style.right} />
-              </button>
-            </div>
+              {!removeLoading && <Load/>}
+      
           </div>
 
 
@@ -88,7 +99,10 @@ const Home = () => {
 
 
         </section>
+
+        
       </main>
+    
     </>
   )
 }
