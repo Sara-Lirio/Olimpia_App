@@ -39,6 +39,20 @@ const FormClientes = () => {
     navigate('/clientes');
   }
 
+  async function request() {
+    const response = await getClienteUnico(id);
+    console.log(response);
+    setDadosForm({
+      nome: response.cliente.nome,
+      cpf: response.cliente.cpf,
+      email: response.cliente.email,
+      senha: response.cliente.senha,
+      telefone: response.cliente.telefone,
+      cep: response.cliente.cep,
+    });
+    console.log(dadosForm);
+  }
+
   return (
     <div>
       <Form>
