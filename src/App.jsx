@@ -25,7 +25,7 @@ function App() {
         <Route path='/cadastroLivro' element={<CadastroLivro />} />
       </Routes>
 
-      <Footer />
+      <Footer /> 
     </BrowserRouter>
   )
 }

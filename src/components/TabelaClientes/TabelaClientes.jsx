@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { deleteCliente } from '../../service/api';
+import { deleteCliente } from '../../service/api';
 import { Cell, Row, Div } from '../../styles/global.js';
 import ModalDelete from '../../components/ModalDelete/ModalDelete.jsx';
 import { useNavigate } from 'react-router-dom';

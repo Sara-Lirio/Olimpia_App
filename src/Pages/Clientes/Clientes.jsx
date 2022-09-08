@@ -3,7 +3,7 @@ import Header from '../../components/Header/Header';
 import { Div } from '../../styles/global.js';
 import { useEffect, useState } from 'react';
 import { Cell, Row } from '../../styles/global.js';
-// import { readCliente } from '../../service/api';
+import { readCliente } from '../../service/api';
 import TabelaClientes from '../../components/TabelaClientes/TabelaClientes.jsx';
 
 const Clientes = () => {
