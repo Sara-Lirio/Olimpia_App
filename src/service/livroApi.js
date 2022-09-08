@@ -14,6 +14,10 @@ export async function deletaLivro(idLivro) {
   await api.delete(`/livros/idLivro/${idLivro}`);
 }
 
-export async function putLivro(rota, idLivro, objLivro) {
+export async function putLivro(rota, idLivro) {
   await api.put(`/livros/idLivro/${rota}/${idLivro}`)
+}
+
+export async function postLivro(rota, idLivro){
+  await api.post(`/livros`)
 }

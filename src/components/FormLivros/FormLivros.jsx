@@ -28,7 +28,8 @@ const FormLivros = () => {
     nPaginas: 0,
   });
 
-  const handleChange = (key, value) => {
+  const handleChange = (key, target) => {
+    const value = target.value;
     setDadosForm({ ...dadosForm, [key]: value });
   };
 
@@ -48,8 +49,8 @@ const FormLivros = () => {
         <div id={S.imagem}>
           <Label texto="Imagem" />
           <Input
-            type="text"
-            value={dadosForm.imagem}
+            type="url"
+            defaultValue={dadosForm.imagem}
             placeholder="Cole a URL..."
             onChange={({ target }) => handleChange(target.value, "imagem")}
           />
@@ -59,7 +60,7 @@ const FormLivros = () => {
           <Label texto="Titulo" />
           <Input
             type="text"
-            value={dadosForm.titulo}
+            defaultValue={dadosForm.titulo}
             placeholder="Insira o título..."
             onChange={({ target }) => handleChange(target.value, "titulo")}
           />
@@ -69,7 +70,7 @@ const FormLivros = () => {
           <Label texto="Autor" />
           <Input
             type="text"
-            value={dadosForm.autor}
+            defaultValue={dadosForm.autor}
             placeholder="Digite o nome..."
             onChange={({ target }) => handleChange(target.value, "autor")}
           />
@@ -79,7 +80,7 @@ const FormLivros = () => {
           <Label texto="Preço: R$" />
           <Input
             type="number"
-            value={dadosForm.valor}
+            defaultValue={dadosForm.valor}
             onChange={({ target }) => handleChange(target.value, "valor")}
           />
         </div>
@@ -88,7 +89,7 @@ const FormLivros = () => {
           <Label texto="Genero" />
           <Input
             type="text"
-            value={dadosForm.genero}
+            defaultValue={dadosForm.genero}
             placeholder="Digite o gênero..."
             onChange={({ target }) => handleChange(target.value, "genero")}
           />
@@ -123,7 +124,7 @@ const FormLivros = () => {
           <Label texto="Idioma" />
           <Input
             type="text"
-            value={dadosForm.idioma}
+            defaultValue={dadosForm.idioma}
             placeholder="Digite o idioma..."
             onChange={({ target }) => handleChange(target.value, "idioma")}
           />
@@ -133,7 +134,7 @@ const FormLivros = () => {
           <Label texto="Qdt no Estoque" />
           <Input
             type="number"
-            value={dadosForm.qtdEstoque}
+            defaultValue={dadosForm.qtdEstoque}
             placeholder="Apenas números"
             onChange={({ target }) => handleChange(target.value, "qtdEstoque")}
           />
@@ -143,7 +144,7 @@ const FormLivros = () => {
           <Label texto="nº Páginas" />
           <Input
             type="number"
-            value={dadosForm.nPaginas}
+            defaultValue={dadosForm.nPaginas}
             placeholder="Apenas números"
             onChange={({ target }) => handleChange(target.value, "nPaginas")}
           />
