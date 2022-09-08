@@ -1,4 +1,5 @@
-import './App.css'
+import './styles/reset.css'
+import './styles/global.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Clientes from './Pages/Clientes/Clientes'
@@ -7,6 +8,7 @@ import Livros from './Pages/Livros/Livros'
 import Equipe from './Pages/Equipe/Equipe'
 import CadastroCliente from './Pages/CadastroCliente/CadastroCliente'
 import CadastroLivro from './Pages/CadastroLivro/CadastroLivro'
+import FormLivros from './components/FormLivros/FormLivros'
 import HomeLogin from './Pages/HomeLogin/HomeLogin'
 
 function App() {
@@ -23,7 +25,7 @@ function App() {
         <Route path='/cadastroLivro' element={<CadastroLivro />} />
       </Routes>
 
-      <Footer />
+      <Footer /> 
     </BrowserRouter>
   )
 }

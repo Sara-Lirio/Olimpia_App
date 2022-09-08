@@ -1,0 +1,49 @@
+.cardLivro {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  .cardLivro {
+    display: flex;
+    flex-direction: column;
+  }
+  #icons {
+    display: flex;
+    flex-direction: row !important;
+  }
+}
+
+#info p {
+  background-color: #f5f5f5;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+#info h1 {
+  margin-bottom: 10px;
+}
+
+#imagem {
+  text-align: center;
+}
+
+#imagem img {
+  height: 200px;
+  width: 150px;
+  object-fit: cover;
+}
+
+#icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
