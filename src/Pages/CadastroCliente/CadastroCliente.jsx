@@ -19,18 +19,23 @@ const DivTitulos = styled.div`
 const DivGeral = styled.form`
   margin: 0 auto;
   display: grid;
-  width: 70%;
-  height: 600px;
+  width: 60%;
+  height: 500px;
   grid-template-columns: 35% 65%;
   grid-template-rows: repeat(1, 1fr);
   border-radius: 15px;
-  margin-top: 40px;
+  margin-top: 60px;
   box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.08);
 `;
 
 const Img = styled.img`
-  width: 330px;
-  margin-top: 90px;
+  width: 270px;
+  margin-top: 40px;
+`;
+
+const Div = styled.div`
+  height: 500px;
+  background-color: green;
 `;
 
 const CadastroCliente = () => {
@@ -45,6 +50,9 @@ const CadastroCliente = () => {
         </DivTitulos>
         <FormClientes />
       </DivGeral>
+      <Div>
+        <p>conteudo</p>
+      </Div>
     </div>
   );
 };
