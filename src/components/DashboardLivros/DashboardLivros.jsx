@@ -1,15 +1,12 @@
 import { useEffect } from "react";
 import { React, useState } from "react";
 import { getLivros } from "../../service/livroApi";
-import { deletaLivro } from "../../service/livroApi";
 import ItemLivros from "../ItemLivros/ItemLivros";
 
 
 const DashboardLivros = () => {
   const [livros, setLivros] = useState([]);
   const [atualizar, setAtualizar] = useState(false);
-
-  
 
   async function requisicao() {
     const response = await getLivros();
@@ -37,7 +34,6 @@ const DashboardLivros = () => {
         {!!livros &&
           livros.map((livro, index) => {
             return (
-
               <ItemLivros 
               key={index}
                 imagem={livro.imagem}
@@ -49,17 +45,13 @@ const DashboardLivros = () => {
                 valor={livro.valor}
                 idioma={livro.idioma}
                 qtdEstoque={livro.qtdEstoque}
-                nPaginas={livro.nPaginas}
+                numeroPaginas={livro.numeroPaginas}
                 handleAtualizar={handleAtualizar}
               />
             );
           })}
       </section>
-
-  
     </div>
-
-   
   );
 };
 
