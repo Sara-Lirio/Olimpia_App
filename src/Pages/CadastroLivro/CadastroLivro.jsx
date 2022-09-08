@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from '../../components/Header/Header.jsx';
 import WomenGlasses from '../../assets/WomenGlasses.png';
 import FormLivros from '../../components/FormLivros/FormLivros.jsx';
+import S from './CadastroLivro.module.css'
 
 const DivTitulos = styled.div`
   display: flex;
@@ -38,8 +39,8 @@ const CadastroLivro = () => {
   return (
     <div>
       <Header/>
-      <DivGeral>
-      <DivTitulos>
+      <DivGeral className={S.boxForm}>
+      <DivTitulos className={S.divTitle}>
           <h1>Cadastro de livros</h1>
           <p>Um universo de infinitas possibilidades!</p>
           <Img src={WomenGlasses} alt="Desenho de uma mulher lendo" />
