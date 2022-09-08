@@ -1,8 +1,8 @@
 .nav {
     display: grid;
-    grid-template-areas: 'btnMenu logo search user btnExit';
+    grid-template-areas: 'btnMenu logo logo search user btnExit';
     margin: 1em 4em;
-    gap: 35px;
+    gap: 25px;
 }
 
 
@@ -22,8 +22,9 @@
 }
 
 .logo {
-    width: 70%;
+    width: 90%;
     grid-area: logo;
+    margin-left: 1em;
 }
 
 .search {

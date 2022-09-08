@@ -43,7 +43,7 @@ function getWidthGrid(value) {
 
 export const Column = styled.div`
   float: left;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: start;
   padding: 0.25rem;
   min-height: 1px;
@@ -67,7 +67,7 @@ export const DivInput = styled.div``;
 export const Button = styled.button`
   background-color: #013e19;
   color: white;
-  width: 270px;
+  width: 170px;
   height: 35px;
   border: none;
   border-radius: 5px;

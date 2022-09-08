@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { TextField } from '@mui/material';
+import { updateCliente, getClienteUnico } from '../../service/api.js';
 import {
-  createCliente,
-  getClienteUnico,
-  updateCliente,
-} from '../../service/api.js';
-import { Form, Row, Column, DivInput, Button } from './FormStyle.js';
+  Form,
+  Row,
+  Column,
+  DivInput,
+  Button,
+} from '../../components/FormClientes/FormStyle.js';
 import Label from '../../components/Label/Label.jsx';
 import Input from '../../components/Input/Input.jsx';
 
-const FormClientes = () => {
+const AtualizaCliente = () => {
   const params = useParams();
   const navigate = useNavigate();
-  const id = params.id;
-
   const [dadosForm, setDadosForm] = useState({
     nome: '',
     cpf: '',
@@ -23,41 +22,24 @@ const FormClientes = () => {
     telefone: '',
     cep: '',
   });
-
-  const handleChange = (target, key) => {
-    const value = target.value;
+  const handleChange = (key, value) => {
     setDadosForm({ ...dadosForm, [key]: value });
   };
+  const id = params.id;
 
-  async function salvarCliente(e) {
-    e.preventDefault();
-    if (id) {
-      await updateCliente(id, dadosForm);
-    } else {
-      await createCliente(dadosForm);
-    }
+  async function salvarCliente() {
+    await updateCliente(id, dadosForm);
     navigate('/clientes');
   }
 
   async function request() {
     const response = await getClienteUnico(id);
-    console.log(response);
-    setDadosForm({
-      nome: response.cliente.nome,
-      cpf: response.cliente.cpf,
-      email: response.cliente.email,
-      senha: response.cliente.senha,
-      telefone: response.cliente.telefone,
-      cep: response.cliente.cep,
-    });
-    console.log(dadosForm);
+    setDadosForm(response);
   }
 
   useEffect(() => {
-    if (id) {
-      request();
-    }
-  }, []);
+    request();
+  }, [id]);
 
   return (
     <div>
@@ -70,7 +52,7 @@ const FormClientes = () => {
                 type="text"
                 value={dadosForm.nome}
                 placeholder="Digite seu nome.."
-                onChange={({ target }) => handleChange(target, 'nome')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
@@ -81,7 +63,7 @@ const FormClientes = () => {
                 type="text"
                 value={dadosForm.cpf}
                 placeholder="Digite seu CPF.."
-                onChange={({ target }) => handleChange(target, 'cpf')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
@@ -92,7 +74,7 @@ const FormClientes = () => {
                 type="text"
                 value={dadosForm.email}
                 placeholder="Digite seu email.."
-                onChange={({ target }) => handleChange(target, 'email')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
@@ -103,7 +85,7 @@ const FormClientes = () => {
                 type="password"
                 value={dadosForm.senha}
                 placeholder="Digite sua senha.."
-                onChange={({ target }) => handleChange(target, 'senha')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
@@ -120,7 +102,7 @@ const FormClientes = () => {
                 type="text"
                 value={dadosForm.telefone}
                 placeholder="Digite seu telefone.."
-                onChange={({ target }) => handleChange(target, 'telefone')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
@@ -131,14 +113,14 @@ const FormClientes = () => {
                 type="text"
                 value={dadosForm.cep}
                 placeholder="Digite seu CEP.."
-                onChange={({ target }) => handleChange(target, 'cep')}
+                onChange={({ target }) => handleChange(target)}
               />
             </DivInput>
           </Column>
         </Row>
         <div>
           <Button onClick={salvarCliente} type="submit">
-            Enviar
+            atualizar
           </Button>
         </div>
       </Form>
@@ -146,4 +128,4 @@ const FormClientes = () => {
   );
 };
 
-export default FormClientes;
+export default AtualizaCliente;
