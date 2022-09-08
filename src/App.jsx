@@ -8,6 +8,7 @@ import Livros from './Pages/Livros/Livros'
 import Equipe from './Pages/Equipe/Equipe'
 import CadastroCliente from './Pages/CadastroCliente/CadastroCliente'
 import CadastroLivro from './Pages/CadastroLivro/CadastroLivro'
+import FormLivros from './components/FormLivros/FormLivros'
 import HomeLogin from './Pages/HomeLogin/HomeLogin'
 
 function App() {

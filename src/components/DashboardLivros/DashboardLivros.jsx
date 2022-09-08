@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { React, useState } from "react";
 import { getLivros } from "../../service/livroApi";
 import ItemLivros from "../ItemLivros/ItemLivros";
-import S from "./DashboardLivros.module.css";
+
 
 const DashboardLivros = () => {
   const [livros, setLivros] = useState([]);
@@ -29,12 +29,13 @@ const DashboardLivros = () => {
   }, [atualizar]);
 
   return (
-    <div className={S.livrosContainer}>
+    <div>
       <section>
         {!!livros &&
-          livros.map((livro) => {
+          livros.map((livro, index) => {
             return (
-              <ItemLivros
+              <ItemLivros 
+              key={index}
                 imagem={livro.imagem}
                 idLivro={livro.idLivro}
                 titulo={livro.titulo}
@@ -44,13 +45,12 @@ const DashboardLivros = () => {
                 valor={livro.valor}
                 idioma={livro.idioma}
                 qtdEstoque={livro.qtdEstoque}
-                nPaginas={livro.nPaginas}
+                numeroPaginas={livro.numeroPaginas}
                 handleAtualizar={handleAtualizar}
               />
             );
           })}
       </section>
-
     </div>
   );
 };

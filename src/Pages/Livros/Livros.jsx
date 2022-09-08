@@ -1,10 +1,9 @@
-import { Button, Table } from "@mui/material";
 import React from "react";
 import Header from "../../components/Header/Header";
 import DashboardLivros from "../../components/DashboardLivros/DashboardLivros";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import S from "./Livros.module.css";
 import { BiBookAdd } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Livros = () => {
 
@@ -19,13 +18,15 @@ const Livros = () => {
             <input type="text" className={S.inputLivro} placeholder="Buscar livro..."/>
           </div>
           <div className={S.iconPlus}>
-            <BiBookAdd size={30} />
+            <Link to='/cadastroLivro'>
+              <BiBookAdd size={30}/>
+            </ Link>
           </div>
         </div>
         <DashboardLivros />
       </section>
     </div>
-  );
+  )
 };
 
 export default Livros;

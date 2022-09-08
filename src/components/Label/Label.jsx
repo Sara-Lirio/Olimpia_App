@@ -11,3 +11,4 @@ const StyleLabel = styled(Label)`
 `;
 
 export default StyleLabel;
+

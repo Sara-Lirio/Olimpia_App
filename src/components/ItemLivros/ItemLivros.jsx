@@ -6,6 +6,7 @@ import { deletaLivro } from "../../service/livroApi";
 import ModalDelLivros from "../ModalDelLivros/ModalDelLivros";
 import S from "./ItemLivros.module.css";
 
+
 const ItemLivros = ({
   imagem,
   idLivro,
@@ -16,8 +17,8 @@ const ItemLivros = ({
   valor,
   idioma,
   qtdEstoque,
-  nPaginas,
-  handleAtualizar
+  numeroPaginas,
+  handleAtualizar,
 }) => {
   const navigate = useNavigate();
   const [openDelete, setOpenDelete] = useState(false);
@@ -30,15 +31,16 @@ const ItemLivros = ({
     setOpenDelete(false);
   }
 
-  async function deletaLivro() {
-    const request = await deletaLivro(idLivro);
+  async function delLivro() {
+   await deletaLivro(idLivro);
     fecharModal();
-    handleAtualizar();
+    handleAtualizar(true);
   }
 
   return (
     <>
-      <section className={S.cardLivro}>
+    <section className={S.livrosContainer}>
+      <div className={S.cardLivro}>
         <div id={S.imagem}>
           <img src={imagem} alt="capa do livro"></img>
           <p>id:{idLivro}</p>
@@ -51,7 +53,7 @@ const ItemLivros = ({
           <p> Preço: R${valor}</p>
           <p>Idioma: {idioma}</p>
           <p>Quantidade em Estoque: {qtdEstoque}</p>
-          <p>Número de Páginas: {nPaginas}</p>
+          <p>Número de Páginas: {numeroPaginas}</p>
         </div>
         <div id={S.icons}>
           <BsPencilSquare
@@ -60,13 +62,17 @@ const ItemLivros = ({
           />
           <MdDelete size={30} onClick={abrirModal} />
         </div>
+      </div>
       </section>
 
       <ModalDelLivros
         open={openDelete}
-        handleFechar={fecharModal}
-        deletaLivro={deletaLivro}
+        handleClose={fecharModal}
+        onClick={delLivro}
+        fecharModal={fecharModal}
       />
+
+
     </>
   );
 };
