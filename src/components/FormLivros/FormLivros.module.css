@@ -21,8 +21,8 @@ flex-direction: column;
   grid-area: cpimg;
   height: 150px;
   width: 100px;
-  border: 1px solid #c6a078;
-  background-color: #f1f1f1;
+  border-radius: 5px;
+  background-color: #eeeeee;
   object-fit: cover;
 }
 #titulo {

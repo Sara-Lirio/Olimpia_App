@@ -5,6 +5,7 @@
     gap: 25px;
 }
 
+
 .btnMenu,
 .btnExit,
 .btnClose {
@@ -130,13 +131,13 @@
 @media (max-width:1440px) {
     .logo {
         width: 
-        40%;
+        20%;
     }
 }
 
 @media (max-width:1024px) {
     .logo {
-        width: 80%;
+        width: 40%;
     }
     
     .search {
