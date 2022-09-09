@@ -35,13 +35,13 @@ const Img = styled.img`
 `;
 
 
-const CadastroLivro = () => {
+const CadastroLivro = ({text}) => {
   return (
     <div>
       <Header/>
       <DivGeral className={S.boxForm}>
       <DivTitulos className={S.divTitle}>
-          <h1>Cadastro de livros</h1>
+          <h1>{text} livros</h1>
           <p>Um universo de infinitas possibilidades!</p>
           <Img src={WomenGlasses} alt="Desenho de uma mulher lendo" />
         </DivTitulos>

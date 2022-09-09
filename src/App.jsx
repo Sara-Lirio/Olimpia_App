@@ -21,8 +21,8 @@ function App() {
         <Route path='/clientes' element={<Clientes />} />
         <Route path='/equipe' element={<Equipe />} />
         <Route path='/cadastroCliente' element={<CadastroCliente />} />
-        <Route path='/cadastroLivro' element={<CadastroLivro />} />
-        <Route path='/atualizaLivro/:idLivro' element={<CadastroLivro />} />
+        <Route path='/cadastroLivro' element={<CadastroLivro text='Cadastro'/>} />
+        <Route path='/atualizaLivro/:idLivro' element={<CadastroLivro text='Atualiza' />} />
       </Routes>
 
       <Footer /> 
