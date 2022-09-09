@@ -10,6 +10,7 @@ import CadastroCliente from './Pages/CadastroCliente/CadastroCliente'
 import CadastroLivro from './Pages/CadastroLivro/CadastroLivro'
 import FormLivros from './components/FormLivros/FormLivros'
 import HomeLogin from './Pages/HomeLogin/HomeLogin'
+import AtualizaLivro from './Pages/AtualizaLivro/AtualizaLivro'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/equipe' element={<Equipe />} />
         <Route path='/cadastroCliente' element={<CadastroCliente />} />
         <Route path='/cadastroLivro' element={<CadastroLivro />} />
+        <Route path='/atualizaLivro' element={<AtualizaLivro/>} />
       </Routes>
 
       <Footer /> 
