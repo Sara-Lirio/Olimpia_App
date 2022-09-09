@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Label from "../Label/Label";
 import Input from '../../components/Input/Input.jsx';
-import { postLivro, putLivro } from "../../service/livroApi";
+import { postLivro, putLivro, getLivroUnico } from "../../service/livroApi";
 
 const FormLivros = () => {
   const params = useParams();
@@ -49,19 +49,20 @@ const FormLivros = () => {
 
   async function request(){
     const response = await getLivroUnico(idLivro);
-    console.log(response);
+
     setDadosForm({
-    imagem: response.livros.imagem,
-    idLivro:  response.livros.idLivro,
-    titulo: response.livros.imagem,
-    autor:  response.livros.autor,
-    genero:  response.livros.genero,
-    formato:  response.livros.formato,
-    valor: response.livros.valor,
-    idioma:  response.livros.idioma,
-    qtdEstoque:  response.livros.qtdEstoque,
-    numeroPaginas:  response.livros.numeroPaginas,
+    imagem: response.titulo.imagem,
+    idLivro: response.titulo.idLivro,
+    titulo: response.titulo.titulo,
+    autor: response.titulo.autor,
+    genero: response.titulo.genero,
+    formato: response.titulo.formato,
+    valor: response.titulo.valor,
+    idioma: response.titulo.idioma,
+    qtdEstoque: response.titulo.qtdEstoque,
+    numeroPaginas: response.titulo.numeroPaginas,
     })
+    console.log(response)
   }
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const FormLivros = () => {
           <Label texto="Imagem" />
           <Input
             type="url"
-            defaultValue={dadosForm.imagem}
+            value={dadosForm.imagem}
             placeholder="Cole a URL..."
             onChange={({ target }) => handleChange(target, "imagem")}
           />
@@ -92,7 +93,7 @@ const FormLivros = () => {
           <Label texto="Titulo" />
           <Input
             type="text"
-            defaultValue={dadosForm.titulo}
+          value={dadosForm.titulo}
             placeholder="Insira o título..."
             onChange={({ target }) => handleChange(target, "titulo")}
           />
@@ -102,7 +103,7 @@ const FormLivros = () => {
           <Label texto="Autor" />
           <Input
             type="text"
-            defaultValue={dadosForm.autor}
+            value={dadosForm.autor}
             placeholder="Digite o nome..."
             onChange={({ target }) => handleChange(target, "autor")}
           />
@@ -112,7 +113,7 @@ const FormLivros = () => {
           <Label texto="Preço: R$" />
           <Input
             type="number"
-            defaultValue={dadosForm.valor}
+            value={dadosForm.valor}
             onChange={({ target }) => handleChange(target, "valor")}
           />
         </div>
@@ -121,7 +122,7 @@ const FormLivros = () => {
           <Label texto="Genero" />
           <Input
             type="text"
-            defaultValue={dadosForm.genero}
+            value={dadosForm.genero}
             placeholder="Digite o gênero..."
             onChange={({ target }) => handleChange(target, "genero")}
           />
@@ -135,7 +136,7 @@ const FormLivros = () => {
             <RadioGroup id={S.radio}
               aria-labelledby="demo-controlled-radio-buttons-group"
               name="controlled-radio-buttons-group"
-             defoultValue={dadosForm.genero}
+             defaultValue={dadosForm.genero}
               onChange={({ target }) => handleChange(target, "formato")}
             >
               <FormControlLabel
@@ -156,7 +157,7 @@ const FormLivros = () => {
           <Label texto="Idioma" />
           <Input
             type="text"
-            defaultValue={dadosForm.idioma}
+            value={dadosForm.idioma}
             placeholder="Digite o idioma..."
             onChange={({ target }) => handleChange(target, "idioma")}
           />
@@ -166,7 +167,7 @@ const FormLivros = () => {
           <Label texto="Qdt no Estoque" />
           <Input
             type="number"
-            defaultValue={dadosForm.qtdEstoque}
+            value={dadosForm.qtdEstoque}
             placeholder="Apenas números"
             onChange={({ target }) => handleChange(target, "qtdEstoque")}
           />
@@ -176,9 +177,9 @@ const FormLivros = () => {
           <Label texto="nº Páginas" />
           <Input
             type="number"
-            defaultValue={dadosForm.nPaginas}
+            value={dadosForm.numeroPaginas}
             placeholder="Apenas números"
-            onChange={({ target }) => handleChange(target, "nPaginas")}
+            onChange={({ target }) => handleChange(target, "numeroPaginas")}
           />
         </div>
       </form>

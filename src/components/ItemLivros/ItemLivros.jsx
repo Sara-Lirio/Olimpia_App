@@ -58,7 +58,7 @@ const ItemLivros = ({
         <div id={S.icons}>
           <BsPencilSquare
             size={25}
-            onClick={() => navigate(`/editarLivro/${idLivro}`)}
+            onClick={() => navigate(`/atualizaLivro/${idLivro}`)}
           />
           <MdDelete size={30} onClick={abrirModal} />
         </div>

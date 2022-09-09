@@ -17,7 +17,7 @@ export async function getLivros() {
 }
 
 export async function getLivroUnico(idLivro) {
-  const response = await api.get(`/clientes/idLivro/${idLivro}`);
+  const response = await api.get(`/livros/idLivro/${idLivro}`);
   return response.data;
 }
 
