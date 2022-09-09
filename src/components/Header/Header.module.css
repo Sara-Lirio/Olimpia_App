@@ -1,8 +1,10 @@
 .nav {
     display: grid;
-    grid-template-areas: 'btnMenu logo logo search user btnExit';
+    grid-template-columns: 1fr 2fr 4fr 1fr 1fr;
+    grid-template-areas: 'btnMenu logo search search user btnExit';
     margin: 1em 4em;
     gap: 25px;
+    align-items: center;
 }
 
 .btnMenu,
@@ -21,16 +23,16 @@
 }
 
 .logo {
-    width: 90%;
+    width: 60%;
     grid-area: logo;
-    margin-left: 1em;
+
 }
 
 .search {
     display: flex;
     align-items: center;
     grid-area: search;
-    width: 40em;
+    width: 35em;
 }
 
 .input {
@@ -56,25 +58,26 @@
     border: none;
     display: flex;
     align-items: center;
-    padding: 0em 3em;
+    padding: 0em 3.5em;
     grid-area: btnExit;
     color: black;
     border-radius: 5px;
     font-weight: 600;
     margin-top: .5em;
+    height: 40px;
 }
 
 .navPages {
     display: flex;
     justify-content: center;
-    margin-right: 10em;
+    margin-right: 5em;
     margin-top: .5em;
 }
 
 .link {
     text-decoration: none;
     color: black;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin-left: 2em;
