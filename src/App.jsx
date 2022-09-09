@@ -20,9 +20,10 @@ function App() {
         <Route path='/livros' element={<Livros />} />
         <Route path='/clientes' element={<Clientes />} />
         <Route path='/equipe' element={<Equipe />} />
-        <Route path='/cadastroCliente' element={<CadastroCliente />} />
+        <Route path='/cadastroCliente' element={<CadastroCliente text='Cadastro'/>} />
         <Route path='/cadastroLivro' element={<CadastroLivro text='Cadastro'/>} />
         <Route path='/atualizaLivro/:idLivro' element={<CadastroLivro text='Atualiza' />} />
+        <Route path='/atualizaCliente/:id' element={<CadastroCliente text='Atualização' />} /> 
       </Routes>
 
       <Footer /> 

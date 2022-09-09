@@ -38,13 +38,13 @@ const Div = styled.div`
   background-color: green;
 `;
 
-const CadastroCliente = () => {
+const CadastroCliente = ({text}) => {
   return (
     <div>
       <Header />
       <DivGeral>
         <DivTitulos>
-          <h1>Cadastro de clientes</h1>
+          <h1>{text} de clientes</h1>
           <p>Pronto para criar novas histórias?</p>
           <Img src={ManReading} alt="" />
         </DivTitulos>
