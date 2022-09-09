@@ -15,12 +15,12 @@
     border: none;
     border-radius: 5px;
     text-align: center;
-    padding: .5em;
     font-weight: 600;
     color: black;
     cursor: pointer;
     margin-right: 1em;
     grid-area: cliente;
+    padding-top: 20px;
 }
 
 .btnLivro {
@@ -28,11 +28,11 @@
     border: none;
     border-radius: 5px;
     text-align: center;
-    padding: .5em;
     font-weight: 600;
     color: white;
     cursor: pointer;
     grid-area: livro;
+    padding-top: 20px;
 }
 
 .imgcard {
@@ -61,7 +61,8 @@
 
 .title {
     grid-area: title;
-    color: #013E19
+    color: #013E19;
+    font-size: 30px;
 }
 
 .description {
@@ -84,7 +85,8 @@
     display: grid;
     grid-template-areas: 'livro cliente';
     gap: 15px;
-    width: 22em;
+    width: 25em;
+    font-size: 18px;
 }
 
 .books {
@@ -107,14 +109,14 @@
     display: flex;
     justify-content: center; 
     position: absolute;
-    margin-left: 500px;
+    margin-left: 600px;
 }
 
 .btnleft, .btnright {
     border: none;
     background-color: transparent;
     color: rgb(56, 56, 56);
-    margin-top: 29.1em;
+    margin-top: 31.4em;
     cursor: pointer;
 }
 
@@ -128,8 +130,9 @@
 
 .h3 {
     font-weight: 500;
-    margin-left: 8em;
+    margin-left: 10em;
     font-size: 18px;
+    width: 80%;
 }
 
 @media (max-width:1024px) {
