@@ -1,20 +1,24 @@
 import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import S from "./FormLivros.module.css";
 import {
   Button,
   FormControl,
   FormControlLabel,
   FormLabel,
-  Input,
   Radio,
   RadioGroup,
 } from "@mui/material";
 import Label from "../Label/Label";
+import Input from '../../components/Input/Input.jsx';
+import { postLivro, putLivro } from "../../service/livroApi";
 
 const FormLivros = () => {
+  const params = useParams();
   const navigate = useNavigate();
+  const idLivro = params.idLivro;
+
   const [dadosForm, setDadosForm] = useState({
     imagem: "",
     idLivro: 0,
@@ -25,19 +29,47 @@ const FormLivros = () => {
     valor: 0,
     idioma: "",
     qtdEstoque: 0,
-    nPaginas: 0,
+    numeroPaginas: 0,
   });
 
-  const handleChange = (key, target) => {
+  const handleChange = (target, key) => {
     const value = target.value;
     setDadosForm({ ...dadosForm, [key]: value });
   };
 
-  const handleCreate = (e) => {
+  async function salvarLivro(e){
     e.preventDefault();
-    createLivros(dadosForm);
-    navigate("/livros");
-  };
+    if (idLivro){
+      await putLivro(idLivro, dadosForm);
+    } else {
+      await postLivro(dadosForm)
+    }
+    navigate('/livros')
+  }
+
+  async function request(){
+    const response = await getLivroUnico(idLivro);
+    console.log(response);
+    setDadosForm({
+    imagem: response.livros.imagem,
+    idLivro:  response.livros.idLivro,
+    titulo: response.livros.imagem,
+    autor:  response.livros.autor,
+    genero:  response.livros.genero,
+    formato:  response.livros.formato,
+    valor: response.livros.valor,
+    idioma:  response.livros.idioma,
+    qtdEstoque:  response.livros.qtdEstoque,
+    numeroPaginas:  response.livros.numeroPaginas,
+    })
+  }
+
+  useEffect(() => {
+    if (idLivro){
+      request()
+    }
+  }, []);
+
 
   return (
     <div className={S.boxContainer}>
@@ -52,7 +84,7 @@ const FormLivros = () => {
             type="url"
             defaultValue={dadosForm.imagem}
             placeholder="Cole a URL..."
-            onChange={({ target }) => handleChange(target.value, "imagem")}
+            onChange={({ target }) => handleChange(target, "imagem")}
           />
         </div>
 
@@ -62,7 +94,7 @@ const FormLivros = () => {
             type="text"
             defaultValue={dadosForm.titulo}
             placeholder="Insira o título..."
-            onChange={({ target }) => handleChange(target.value, "titulo")}
+            onChange={({ target }) => handleChange(target, "titulo")}
           />
         </div>
 
@@ -72,7 +104,7 @@ const FormLivros = () => {
             type="text"
             defaultValue={dadosForm.autor}
             placeholder="Digite o nome..."
-            onChange={({ target }) => handleChange(target.value, "autor")}
+            onChange={({ target }) => handleChange(target, "autor")}
           />
         </div>
 
@@ -81,7 +113,7 @@ const FormLivros = () => {
           <Input
             type="number"
             defaultValue={dadosForm.valor}
-            onChange={({ target }) => handleChange(target.value, "valor")}
+            onChange={({ target }) => handleChange(target, "valor")}
           />
         </div>
 
@@ -91,7 +123,7 @@ const FormLivros = () => {
             type="text"
             defaultValue={dadosForm.genero}
             placeholder="Digite o gênero..."
-            onChange={({ target }) => handleChange(target.value, "genero")}
+            onChange={({ target }) => handleChange(target, "genero")}
           />
         </div>
 
@@ -103,8 +135,8 @@ const FormLivros = () => {
             <RadioGroup id={S.radio}
               aria-labelledby="demo-controlled-radio-buttons-group"
               name="controlled-radio-buttons-group"
-              value={dadosForm.genero}
-              onChange={({ target }) => handleChange(target.value, "formato")}
+             defoultValue={dadosForm.genero}
+              onChange={({ target }) => handleChange(target, "formato")}
             >
               <FormControlLabel
                 value="físico"
@@ -126,7 +158,7 @@ const FormLivros = () => {
             type="text"
             defaultValue={dadosForm.idioma}
             placeholder="Digite o idioma..."
-            onChange={({ target }) => handleChange(target.value, "idioma")}
+            onChange={({ target }) => handleChange(target, "idioma")}
           />
         </div>
 
@@ -136,7 +168,7 @@ const FormLivros = () => {
             type="number"
             defaultValue={dadosForm.qtdEstoque}
             placeholder="Apenas números"
-            onChange={({ target }) => handleChange(target.value, "qtdEstoque")}
+            onChange={({ target }) => handleChange(target, "qtdEstoque")}
           />
         </div>
 
@@ -146,12 +178,12 @@ const FormLivros = () => {
             type="number"
             defaultValue={dadosForm.nPaginas}
             placeholder="Apenas números"
-            onChange={({ target }) => handleChange(target.value, "nPaginas")}
+            onChange={({ target }) => handleChange(target, "nPaginas")}
           />
         </div>
       </form>
       <div className={S.btncontainer}>
-        <Button variant="contained" onClick={handleCreate} type="submit">
+        <Button variant="contained" onClick={salvarLivro} type="submit">
           Enviar
         </Button>
       </div>

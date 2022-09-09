@@ -50,7 +50,7 @@ const ItemLivros = ({
           <p>Autor/a: {autor}</p>
           <p>Gênero: {genero}</p>
           <p>Formato:{formato}</p>
-          <p> Preço: R${valor}</p>
+          <p>Preço: R${valor}</p>
           <p>Idioma: {idioma}</p>
           <p>Quantidade em Estoque: {qtdEstoque}</p>
           <p>Número de Páginas: {numeroPaginas}</p>
