@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../../components/Header/Header';
-import { Div } from '../../styles/global.js';
+import Label from '../../components/Label/Label.jsx';
 import { useEffect, useState } from 'react';
-import { Cell, Row } from '../../styles/global.js';
+import { Div, Cell, Row, Search, Input } from '../../styles/global.js';
 import { readCliente } from '../../service/api';
 import TabelaClientes from '../../components/TabelaClientes/TabelaClientes.jsx';
 
@@ -35,6 +35,10 @@ const Clientes = () => {
       <Header />
       <div></div>
       <Div>
+        <Search>
+          <Label texto="Filtrar:" />
+          <Input type="text" />
+        </Search>
         <th>
           <Row>
             <Cell align="left">id</Cell>
