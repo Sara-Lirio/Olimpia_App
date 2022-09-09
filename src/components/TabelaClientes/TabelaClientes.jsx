@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { deleteCliente } from '../../service/api';
-import { Cell, Row, Div } from '../../styles/global.js';
+import { Cell, Row } from '../../styles/global.js';
 import ModalDelete from '../../components/ModalDelete/ModalDelete.jsx';
 import { useNavigate } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
+import { BsPencilSquare } from 'react-icons/bs';
+import { MdDelete } from 'react-icons/md';
 
 const TabelaClientes = ({
   id,
@@ -45,14 +47,15 @@ const TabelaClientes = ({
             <Cell align="left">{telefone}</Cell>
             <Cell align="left">{cep}</Cell>
 
-            <Cell align="left">
-              <button onClick={() => navigate(`/atualizaCliente/${id}`)}>
-                atualizar
-              </button>
+            <Cell
+              onClick={() => navigate(`/atualizaCliente/${id}`)}
+              align="left"
+            >
+              <BsPencilSquare size={25} />
             </Cell>
 
-            <Cell align="left">
-              <button onClick={abrirModal}>Deletar</button>
+            <Cell onClick={abrirModal} align="left">
+              <MdDelete size={25} />
             </Cell>
           </Row>
         </TableBody>
