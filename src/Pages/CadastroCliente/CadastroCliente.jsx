@@ -34,8 +34,8 @@ const Img = styled.img`
 `;
 
 const Div = styled.div`
-  height: 500px;
-  background-color: green;
+  height: 100px;
+  color: transparent;
 `;
 
 const CadastroCliente = () => {
