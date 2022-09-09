@@ -1,10 +1,24 @@
 import styled from 'styled-components';
 
 export const Div = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 100px;
+  margin-left: 130px;
+`;
+
+export const Search = styled.div`
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+`;
+
+export const Input = styled.input`
+  height: 35px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid black;
 `;
 
 export const Row = styled.tr`
