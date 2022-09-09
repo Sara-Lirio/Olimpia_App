@@ -1,3 +1,5 @@
+import './styles/reset.css';
+import './styles/global.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Clientes from './Pages/Clientes/Clientes';
@@ -16,10 +18,23 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/livros" element={<Livros />} />
         <Route path="/clientes" element={<Clientes />} />
-        <Route path="/atualizaCliente/:id" element={<CadastroCliente />} />
         <Route path="/equipe" element={<Equipe />} />
-        <Route path="/cadastroCliente" element={<CadastroCliente />} />
-        <Route path="/cadastroLivro" element={<CadastroLivro />} />
+        <Route
+          path="/cadastroCliente"
+          element={<CadastroCliente text="Cadastro" />}
+        />
+        <Route
+          path="/cadastroLivro"
+          element={<CadastroLivro text="Cadastro" />}
+        />
+        <Route
+          path="/atualizaLivro/:idLivro"
+          element={<CadastroLivro text="Atualiza" />}
+        />
+        <Route
+          path="/atualizaCliente/:id"
+          element={<CadastroCliente text="Atualização" />}
+        />
       </Routes>
 
       <Footer />
