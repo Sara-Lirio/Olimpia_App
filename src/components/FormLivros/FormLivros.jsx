@@ -79,16 +79,6 @@ const FormLivros = () => {
           <img src={dadosForm.imagem} height={150} />
         </div>
 
-        <div id={S.imagem}>
-          <Label texto="Imagem" />
-          <Input
-            type="url"
-            value={dadosForm.imagem}
-            placeholder="Cole a URL..."
-            onChange={({ target }) => handleChange(target, "imagem")}
-          />
-        </div>
-
         <div id={S.titulo}>
           <Label texto="Titulo" />
           <Input
@@ -109,12 +99,13 @@ const FormLivros = () => {
           />
         </div>
 
-        <div id={S.valor}>
-          <Label texto="Preço: R$" />
+        <div id={S.imagem}>
+          <Label texto="Imagem" />
           <Input
-            type="number"
-            value={dadosForm.valor}
-            onChange={({ target }) => handleChange(target, "valor")}
+            type="url"
+            value={dadosForm.imagem}
+            placeholder="Cole a URL..."
+            onChange={({ target }) => handleChange(target, "imagem")}
           />
         </div>
 
@@ -125,6 +116,16 @@ const FormLivros = () => {
             value={dadosForm.genero}
             placeholder="Digite o gênero..."
             onChange={({ target }) => handleChange(target, "genero")}
+          />
+        </div>
+
+        <div id={S.idioma}>
+          <Label texto="Idioma" />
+          <Input
+            type="text"
+            value={dadosForm.idioma}
+            placeholder="Digite o idioma..."
+            onChange={({ target }) => handleChange(target, "idioma")}
           />
         </div>
 
@@ -153,16 +154,6 @@ const FormLivros = () => {
           </FormControl>
         </div>
 
-        <div id={S.idioma}>
-          <Label texto="Idioma" />
-          <Input
-            type="text"
-            value={dadosForm.idioma}
-            placeholder="Digite o idioma..."
-            onChange={({ target }) => handleChange(target, "idioma")}
-          />
-        </div>
-
         <div id={S.estoque}>
           <Label texto="Qdt no Estoque" />
           <Input
@@ -180,6 +171,15 @@ const FormLivros = () => {
             value={dadosForm.numeroPaginas}
             placeholder="Apenas números"
             onChange={({ target }) => handleChange(target, "numeroPaginas")}
+          />
+        </div>
+
+        <div id={S.valor}>
+          <Label texto="Preço: R$" />
+          <Input
+            type="number"
+            value={dadosForm.valor}
+            onChange={({ target }) => handleChange(target, "valor")}
           />
         </div>
       </form>
