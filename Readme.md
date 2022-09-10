@@ -72,7 +72,7 @@ npm start
 Depois de rodar o projeto com o comando acima irá aparecer o endereço local do site como mostra a imagem abaixo, segure a tecla ```alt``` ou ```ctrl```  e ```clique``` em cima do local para abrir o site no servidor de sua preferência:
 
 <p align="center">
-  <img src="./public\local.png"/>
+  <img src="./public\local.png" height="100%"/>
 </p>
 
 ## 🛣️ Rotas do projeto:
