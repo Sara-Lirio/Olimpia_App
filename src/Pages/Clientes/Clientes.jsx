@@ -5,10 +5,12 @@ import { useEffect, useState } from 'react';
 import { Div, Cell, Row, Search, Input } from '../../styles/global.js';
 import { readCliente } from '../../service/api';
 import TabelaClientes from '../../components/TabelaClientes/TabelaClientes.jsx';
+import Load from '../../components/Load/Load.jsx';
 
 const Clientes = () => {
   const [infos, setInfos] = useState([]);
   const [atualizarTela, setAtualizarTela] = useState(false);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   async function requisicao() {
     const response = await readCliente();
@@ -16,7 +18,10 @@ const Clientes = () => {
   }
 
   useEffect(() => {
-    requisicao();
+    setTimeout(() => {
+      requisicao();
+      setRemoveLoading(true);
+    }, 1000);
   }, []);
 
   function handleAtualizaTela() {
@@ -67,6 +72,7 @@ const Clientes = () => {
             />
           );
         })}
+        {!removeLoading && <Load />}
       </Div>
     </div>
   );
