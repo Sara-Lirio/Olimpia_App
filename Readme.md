@@ -144,7 +144,7 @@ Depois de rodar o projeto com o comando acima irá aparecer o endereço local do
 * Rota ```'/equipe'``` para página de Equipes: Na página é possível ver todos os funcionários cadastrados, assim como seus respectivos nomes e funções. Nesta página contém também o nosso time de desenvolvimento assim como seus respectivos nomes e funções, clicando na foto você será redirecionado para seu respectivo perfil do linkedin.
 
 <p align="center">
-  <img src="./public\Equipe - Rotas~1.gif"/>
+  <img src="./public\Equipe - Rotas.gif"/>
 </p>
 
 ---
