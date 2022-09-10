@@ -2,19 +2,22 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Label from '../../components/Label/Label.jsx';
 import { useEffect, useState } from 'react';
-import { Div, Cell, Row, Search, Input } from '../../styles/global.js';
+import { Div, Cell, Row, Search } from '../../styles/global.js';
 import { readCliente } from '../../service/api';
 import TabelaClientes from '../../components/TabelaClientes/TabelaClientes.jsx';
 import Load from '../../components/Load/Load.jsx';
+import Pesquisa from '../../components/Pesquisar/Pesquisar';
 
 const Clientes = () => {
   const [infos, setInfos] = useState([]);
+  const [clientesFiltro, setClientesFiltro] = useState([]);
   const [atualizarTela, setAtualizarTela] = useState(false);
   const [removeLoading, setRemoveLoading] = useState(false);
 
   async function requisicao() {
     const response = await readCliente();
     setInfos(response);
+    setClientesFiltro(response);
   }
 
   useEffect(() => {
@@ -35,6 +38,14 @@ const Clientes = () => {
     }
   }, [atualizarTela]);
 
+  function handleSearch(data) {
+    const termo = data.target.value;
+    const clientesFiltro = infos.filter((infos) =>
+      infos.nome.toLowerCase().includes(termo),
+    );
+    setClientesFiltro(clientesFiltro);
+  }
+
   return (
     <div style={{ textAlign: 'center' }}>
       <Header />
@@ -42,7 +53,7 @@ const Clientes = () => {
       <Div>
         <Search>
           <Label texto="Filtrar:" />
-          <Input type="text" />
+          <Pesquisa onChange={handleSearch} />
         </Search>
         <th>
           <Row>
@@ -57,7 +68,7 @@ const Clientes = () => {
             <Cell align="left">Deletar</Cell>
           </Row>
         </th>
-        {infos?.map((infos, index) => {
+        {clientesFiltro?.map((infos, index) => {
           return (
             <TabelaClientes
               id={infos.id}
